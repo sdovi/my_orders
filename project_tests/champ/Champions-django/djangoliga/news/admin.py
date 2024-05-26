@@ -1,0 +1,34 @@
+from django.contrib import admin
+from django.contrib.auth.models import Group
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+from django import forms
+
+from .models import Info, Info_basket, Info_hokey, Subs_info
+
+class CustomUserCreationForm(UserCreationForm):
+    group = forms.ModelChoiceField(queryset=Group.objects.all(), label='Group')  # Меняем queryset
+
+    class Meta(UserCreationForm.Meta):
+        model = User  # Указываем модель
+        fields = ('username', 'password1', 'password2', 'is_staff', 'group')
+
+class CustomUserAdmin(BaseUserAdmin):
+    add_form = CustomUserCreationForm
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': ('username', 'password1', 'password2', 'is_staff', 'group'),
+        }),
+    )
+
+# Регистрируем модели в админке
+admin.site.register(Info)
+admin.site.register(Info_basket)
+admin.site.register(Info_hokey)
+admin.site.register(Subs_info)
+
+# Заменяем стандартную форму создания пользователя на кастомную в админке
+admin.site.unregister(User)
+admin.site.register(User, CustomUserAdmin)

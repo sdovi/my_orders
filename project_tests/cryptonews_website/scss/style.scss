@@ -1,0 +1,616 @@
+@import 'vars.scss';
+
+// Header
+.header {
+    background-color: $darkGray;
+
+    // Header Inner
+    &__inner {
+        padding: 20px 30px;
+
+        &--wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    // Header Logo
+    &__logo {
+        &-full {
+            display: block;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &-short {
+            display: none;
+
+            @media screen and (max-width: 768px) {
+                display: block;
+            }
+        }
+    }
+
+    // Header Submenu
+    &__submenu {
+        padding: 25px 30px;
+        background-color: $headerBlack;
+    }
+
+    // Header EN
+    &__en {
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    // Header Right Wrapper
+    &__right--wrapper {
+        display: flex;
+        align-items: center;
+
+        gap: 25px;
+    }
+}
+
+// Main
+.main {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 40px;
+
+    // Main Wrapper
+    &--wrapper {
+        display: flex;
+        gap: 30px;
+    }
+}
+
+// Header Nav
+.nav {
+    // Nav Menu
+    &__menu {
+        display: flex;
+        align-items: center;
+
+        gap: 20px;
+    }
+
+    // Nav Text
+    &__text {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    // Nav Link
+    &__link {
+        color: $white;
+    }
+
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
+}
+
+// Submenu
+.submenu {
+    // Submenu Inner
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // Submenu Nav
+    &__nav {
+        display: flex;
+        align-items: center;
+
+        gap: 20px;
+
+        // Submenu Nav Text
+        &-text {
+            font-weight: 16;
+            font-weight: 500;
+        }
+
+        // Submenu Nav Link
+        &-link {
+            color: $headerInactive;
+
+            &.active {
+                color: $white;
+            }
+        }
+    }
+
+    // Submenu Links
+    &__links {
+        display: flex;
+        align-items: center;
+
+        gap: 20px;
+
+        @media screen and (max-width: 1000px) {
+            display: none;
+        }
+    }
+}
+
+// Burger Menu
+.burger {
+    position: relative;
+    cursor: pointer;
+    display: none;
+
+    @media screen and (max-width: 1024px) {
+        display: block;
+    }
+
+    // Burger Block
+    &__block {
+        position: absolute;
+        z-index: 10;
+
+        right: 0;
+        padding: 20px;
+        margin-top: 10px;
+
+        border-radius: 5px;
+        border: 1px solid $border;
+
+        background-color: $white;
+    }
+
+    // Burger Menu
+    &__menu {
+        display: grid;
+        align-items: center;
+
+        gap: 30px;
+    }
+
+    // Burger Text
+    &__text {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    // Burger Link
+    &__link {
+        color: $burgerGray;
+    }
+}
+
+// More Menu
+.more {
+    cursor: pointer;
+
+    // More Menu
+    &__menu {
+        position: absolute;
+        z-index: 9;
+
+        padding: 20px;
+        margin-top: 10px;
+
+        border-radius: 5px;
+        border: 1px solid $lightGray;
+
+        background-color: $darkGray;
+    }
+
+    // More Block
+    &__block {
+        display: grid;
+        align-items: center;
+
+        gap: 20px;
+    }
+
+    // More Text
+    &__text {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    // More Link
+    &__link {
+        padding: 10px;
+        color: $white;
+
+        &:hover {
+            color: $lightGray;
+        }
+    }
+
+    // More Submenu
+    &__submenu {
+        display: none;
+
+        @media screen and (max-width: 1000px) {
+            display: grid;
+            align-items: center;
+
+            gap: 20px;
+        }
+    }
+}
+
+// Section First Banner
+.first__banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+// Section News
+.news {
+    // All News
+    &__all {
+        font-size: 48px;
+        font-weight: 600;
+        margin-bottom: 30px;
+
+        color: $darkGray;
+    }
+
+    // Wrapper
+    &--wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1110px) {
+            display: flex;
+            flex-direction: column;
+
+            gap: 30px;
+        }
+    }
+}
+
+// News Block
+.news__block--wrapper {
+    display: grid;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.news__block {
+    padding: 10px;
+
+    width: 100%;
+    max-width: 740px;
+
+    display: flex;
+    gap: 30px;
+
+    border: 1px solid $gray;
+
+    @media screen and (max-width: 1110px) {
+        width: 100%;
+        max-width: 1200px;
+        max-height: 200px;
+    }
+
+    @media screen and (max-width: 840px) {
+        display: flex;
+        flex-direction: column;
+
+        gap: 40px;
+        max-height: max-content;
+    }
+
+    // News Block Img
+    &-img {
+        max-width: 25%;
+        border: 1px solid $gray;
+
+        @media screen and (max-width: 840px) {
+            max-width: 100%;
+        }
+    }
+
+    // Text Wrapper
+    &-text--wrapper {
+        display: grid;
+        align-items: start;
+
+        gap: 20px;
+    }
+
+    // News Block Title
+    &-title {
+        font-size: 20px;
+        font-weight: 700;
+
+        color: $black;
+
+        @media screen and (max-width: 840px) {
+            font-size: 32px;
+        }
+    }
+
+    // Subtitle Wrapper
+    &-subtitle--wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // News Block Subtitle
+    &-subtitle {
+        font-size: 14px;
+        font-weight: 300;
+
+        color: $lightGray;
+    }
+
+    // Share Icon
+    &-share {
+        width: 20px;
+    }
+}
+
+// Aside Wrapper
+.aside--wrapper {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 20px;
+}
+
+// Download
+.download {
+    width: 100%;
+    max-width: 320px;
+    max-height: 150px;
+
+    padding: 20px;
+
+    border: 1px solid $lightGray;
+
+    @media screen and (max-width: 1110px) {
+        max-width: 1200px;
+        
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // Download Block
+    &__block {
+        display: grid;
+        gap: 20px;
+
+        &-title {
+            font-size: 14px;
+            font-weight: 300;
+
+            color: $downloadBlack;
+        }
+    }
+
+    // Download Sources
+    &__sources {
+        display: flex;
+        align-items: center;
+
+        gap: 15px;
+
+        @media screen and (max-width: 1110px) {
+            justify-content: center;
+        }
+    }
+}
+
+// Socials
+.socials {
+    width: 100%;
+    max-width: 320px;
+
+    padding: 20px;
+
+    border: 1px solid $lightGray;
+
+    @media screen and (max-width: 1110px) {
+        max-width: 1200px;
+        
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // Socials Title
+    &__title {
+        font-size: 14px;
+        font-weight: 300;
+
+        color: $downloadBlack;
+    }
+
+    // Socials Block
+    &__block {
+        display: flex;
+        align-items: center;
+
+        margin-top: 10px;
+        gap: 5px;
+
+        &-img {
+            width: 42px;
+        }
+    }
+}
+
+// Footer
+.footer {
+    // Footer Top
+    &__top {
+        padding: 20px 30px;
+        background-color: $footerGray;
+    }
+
+    // Footer Column
+    &__column {
+        display: grid;
+        align-items: center;
+
+        &--wrapper {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+
+            @media screen and (max-width: 445px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                gap: 30px;
+            }
+        }
+
+        &-title {
+            font-size: 15px;
+            font-weight: 500;
+            color: $darkGray;
+
+            @media screen and (max-width: 445px) {
+                font-size: 22px;
+            }
+        }
+
+        &-links {
+            display: grid;
+            align-items: center;
+
+            margin-top: 15px;
+            gap: 8px;
+        }
+
+        &-text {
+            font-size: 12px;
+            font-weight: 400;
+
+            @media screen and (max-width: 445px) {
+                font-size: 16px;
+            }
+        }
+
+        &-link {
+            color: $lightGray;
+        }
+    }
+
+    // Footer Bottom
+    &__bottom {
+        padding: 20px 30px;
+
+        @media screen and (max-width: 870px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &--wrapper {
+            display: flex;
+            align-items: baseline;
+
+            gap: 100px;
+
+            @media screen and (max-width: 870px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                gap: 40px;
+            }
+        }
+    }
+
+    // Footer Download
+    &__download {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+// Back Button
+.back__btn {
+    width: 170px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    color: $white;
+    background-color: $lightGray;
+}
+
+// New
+.new {
+    max-width: 750px;
+    margin-top: 30px;
+
+    // New Title
+    &__title {
+        margin-bottom: 30px;
+
+        font-size: 32px;
+        font-weight: 600;
+
+        color: $darkGray;
+    }
+
+    // New Texts
+    &__texts {
+        display: grid;
+
+        margin-top: 30px;
+        gap: 30px;
+
+        @media screen and (max-width: 425px) {
+            gap: 20px;
+        }
+    }
+
+    // New Text
+    &__text {
+        font-size: 14px;
+        font-weight: 400;
+
+        color: $darkGray;
+
+        @media screen and (max-width: 425px) {
+            font-size: 16px;
+        }
+    }
+
+    // New Source
+    &__source {
+        display: flex;
+        align-items: center;
+
+        margin-top: 30px;
+        gap: 10px;
+
+        color: $blue;
+
+        &-img {
+            width: 18px;
+        }
+    }
+}

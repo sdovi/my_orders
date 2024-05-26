@@ -1,0 +1,81 @@
+{% extends 'base/base.html' %}
+{% load i18n %}
+{% block content %}
+  <!-- Header -->
+  <div class="breadcrub breadcrub-style-3 section">
+    <div class="bg-img">
+      <div class="container">
+        <div class="heading">
+          <h1 class="page-heading">{% trans "Results"%}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Table Section -->
+  <div class="table-section section">
+    <div class="container">
+
+      <!-- Basic Table -->
+      <div class="basic-table-part">
+        <h2>{% trans "Ennouncements search results"%}</h2>
+        <table class="table basic-package-table margin-top-80 margin-bottom-80">
+            <thead>
+              <tr>
+                <th scope="col">{% trans "Ennouncements"%}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for en in ads %}
+              <tr>
+                <th scope="row"><a href="{% url 'ad_detail' pk=en.pk %}">{{en.name}}</a></th>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+      </div>
+
+
+      <!-- Stripped Table -->
+      <div class="stripped-table-part">
+        <h2>{% trans "News search results"%}</h2>
+
+        <table class="table stripped-package-table margin-top-80 margin-bottom-80">
+            <thead>
+              <tr>
+                <th scope="col">{% trans "News"%}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for new in news %}
+              <tr>
+                <th scope="row"><a href="{% url 'news-detail' pk=new.pk %}">{{new.title}}</a></th>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+      </div>
+
+
+      <div class="basic-table-part">
+        <h2>{% trans "Scientific events search results"%}</h2>
+        <table class="table basic-package-table margin-top-80 margin-bottom-80">
+            <thead>
+              <tr>
+                <th scope="col">{% trans "Scientific events"%}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for ev in scien_event %}
+              <tr>
+                <th scope="row"><a href="{% url 'science-event-detail' pk=ev.pk %}">{{ev.name}}</a></th>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

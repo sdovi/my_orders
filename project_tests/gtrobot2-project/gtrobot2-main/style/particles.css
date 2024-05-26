@@ -1,0 +1,73 @@
+#particles-js {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -10;
+}
+
+.shadow {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 40%;
+	background: transparent;
+	backdrop-filter: blur(2px);
+	box-shadow: -1px -93px 70px -26px rgba(0, 0, 0, 0.09);
+	outline-style: solid;
+	outline-color: transparent;
+	outline-width: 20px;
+	outline-style: blur(8px);
+	filter: blur(8px);
+	z-index: -6;
+}
+
+.shadow:nth-child(2) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 45%;
+	background: transparent;
+	outline-style: blur(6px);
+	filter: blur(6px);
+	z-index: -5;
+}
+
+.shadow:nth-child(3) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50%;
+	background: transparent;
+	outline-style: blur(4px);
+	filter: blur(4px);
+	z-index: -4;
+}
+
+.shadow:nth-child(4) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 55%;
+	background: transparent;
+	outline-style: blur(2px);
+	filter: blur(2px);
+	z-index: -3;
+}
+
+.shadow:nth-child(5) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60%;
+	background: transparent;
+	outline-style: blur(0px);
+	filter: blur(0px);
+	z-index: -2;
+}

@@ -1,0 +1,78 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+  <!-- Breadcrumb -->
+  <section class="breadcrub-style section margin-bottom-0">
+    <div class="container">
+      <div class="heading">
+        <h2>{% trans "The board of directors"%}</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Courses -->
+  <section class="popular-courses section margin-top-0">
+    <div class="container">
+      <h2 class="rotated-text-2 d-none d-md-block">{% trans "Directors"%}</h2>
+      {% for q in query %}
+      <!--<div class="row">
+        {% comment %} <div class="col-12 col-md-12 col-lg-12 padding-0"> {% endcomment %}
+          <div class="course-card-style-3">
+            <div class="card">
+              <div class="col-md-6">
+                <div class="thumb">
+                  <img class="card-img-top"
+                    src="{{q.image.url}}" alt="Card image cap">
+                  <div class="hover">
+                    <span class="plus">
+                      <i class="fas fa-plus-circle"></i>
+                    </span>
+                    <div class="hover-inner">
+                      <div class="course-details">
+                        <p></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card-img-overlay">
+                  <div class="card-body">
+                    <h6></h6>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% comment %} </div> {% endcomment %}
+      </div>-->
+
+      <div class="card mb-3" style="max-width: 1140px;">
+        <div class="row no-gutters">
+          <div class="col-md-2">
+            <img src="{{q.image.url}}" class="card-img" alt="...">
+          </div>
+          <div class="col-md-10">
+            <div class="card-body">
+              <h3 class="card-title">{{q.name}}</h3>
+              <hr>
+              <h5 class="card-text">{{q.position}}</h5>
+              <p class="card-text"><h5 class="text-muted">{{q.academic_degree}}</h5></p>
+              <hr>
+              <div class="text-right">
+                <a href="#" class="btn btn-outline-dark" style="text-align: right;">{% trans "Batafsil" %}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+
+    </div>
+  </section>
+
+
+{% endblock %}

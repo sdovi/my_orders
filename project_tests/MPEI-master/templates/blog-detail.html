@@ -1,0 +1,253 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+  <!-- Header Four -->
+  <div class="section">
+    <div class="breadcrub-style-4">
+      <div class="container">
+        <div class="heading">
+          <h2>{% trans 'News'%}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Blog detail -->
+  <section class="blog-detail section">
+    <div class="heading text-center">
+      <h2>{{new.title}}</h2>
+      <h6 class="date">{{new.created_at|date:'d M, Y'}}</h6>
+    </div>
+    <div class="media-grid">
+      <!-- Reviews Section -->
+      <section class="section testimonials-style-3">
+          <div class="container">
+            <div class="testimonial">
+                <div class="testimonial-slider-wrapper">
+                  <div class="testimonial-slider" style="background-image: url({{new.image.url}})">
+                    <div class="content">
+                    </div>
+                  </div>
+                  {% if new.image_extra1 %}
+                  <div class="testimonial-slider" style="background-image: url({{new.image_extra1.url}})">
+                    <div class="content">
+                    </div>
+                  </div>
+                  {% endif %}
+                  {% if new.image_extra2 %}
+                  <div class="testimonial-slider" style="background-image: url({{new.image_extra2.url}})">
+                    <div class="content">
+                      </div>
+                  </div>
+                  {% endif %}
+                  {% if new.image_extra3 %}
+                  <div class="testimonial-slider" style="background-image: url({{new.image_extra3.url}})">
+                    <div class="content">
+                    </div>
+                  </div>
+                  {% endif %}
+                  {% if new.image_extra4 %}
+                  <div class="testimonial-slider" style="background-image: url({{new.image_extra4.url}})">
+                    <div class="content">
+                    </div>
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+              <h1 class="lg-text">News</h1>
+              <div class="carousel-controlar">
+                <svg class="icon prev" version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 7.7 61.19"
+                style="enable-background:new 0 0 7.7 61.19;" xml:space="preserve">
+                <polygon points="7,5.9 4,1.4 1,5.9 3.5,5.9 3.5,60.15 4.5,60.15 4.5,5.9 " />
+              </svg>
+              
+              <svg class="icon next" version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 7.7 61.19"
+                  style="enable-background:new 0 0 7.7 61.19;" xml:space="preserve">
+                  <polygon points="1,55.65 4,60.15 7,55.65 4.5,55.65 4.5,1.4 3.5,1.4 3.5,55.65 " />
+                </svg>
+              </div>
+              <div class="pegination-wrapper d-none d-xl-block">
+                <div class="pagination-style-3">
+                  <h1 class="current">01</h1>
+                  <h5 class="total"></h5>
+                </div>
+              </div>
+            </div>
+          </section> 
+      <div class="side-social-icons hide-md-and-down">
+            {% if sociallinks.facebook %}
+            <a target="_blank" href="{{sociallinks.facebook}}"><i
+                        class="fab fa-facebook-square"></i></a>
+            {% endif %}
+            {% if sociallinks.instagram %}
+            <a target="_blank" href="{{sociallinks.instagram}}"><i
+                        class="fab fa-instagram"></i></a>
+            {% endif %}
+            {% if sociallinks.twitter %}
+            <a target="_blank" href="{{sociallinks.twitter}}"><i class="fab fa-twitter"></i></a>
+            {% endif %}
+            {% if sociallinks.linkedin %}
+            <a target="_blank" href="{{sociallinks.linkedin}}"><i
+                        class="fab fa-linkedin"></i></a>
+            {% endif %}
+            {% if sociallinks.youtube %}
+            <a target="_blank" href="{{sociallinks.youtube}}"><i
+                        class="fab fa-youtube"></i></a>
+            {% endif %}
+            {% if sociallinks.telegram %}
+            <a target="_blank" href="{{sociallinks.telegram}}"><i
+                        class="fab fa-telegram"></i></a>
+            {% endif %}
+            {% if sociallinks.whatsapp %}
+            <a target="_blank" href="{{sociallinks.whatsapp}}"><i
+                        class="fab fa-whatsapp"></i></a>
+            {% endif %}
+      </div>
+    </div>
+    <div class="blog-contents">
+      <!-- Side form icons -->
+      <div class="fixed-right side-form-icons">
+        <i class="fas fa-phone icon" id="open-opening-popup"></i>
+        <i class="fas fa-map-marker-alt icon" id="open-location-popup"></i>
+        <i class="fas fa-envelope icon" id="open-form-popup"></i>
+      </div>
+      <div class="container">
+        <div class="blog-text">
+          <p>{{new.text}}</p>
+        </div>
+
+        <div class="reacts">
+          <div class="react">
+            <i class="fas fa-eye"></i>
+            <p>{{new.count}} {% trans 'views'%}</p>
+          </div>
+        </div>
+
+        <div class="more">
+          <a href="blog-detail.html#">{% trans "Continue reading"%} <span class="arrow">🡢</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Popup -->
+    <div class="side-form-popup">
+        <div class="popup-wrapper">
+            <div class="center-popup">
+                <div class="opening-popup">
+                    <div class="close-popup">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-8 media">
+                            <img src="{% static 'assets/img/University/students/adolescent-adorable-alone.png' %}" alt="media"
+                                class="img-fluid">
+                        </div>
+                        <div class="col-md-6 col-lg-4 content">
+                            <h5>{% trans 'Opening hours'%}</h5>
+                            <div class="openings">
+                                <div class="opening opening-days">
+                                    <p class="day">{% trans "Monday"%}</p>
+                                    <div class="divider"></div>
+                                    <p class="day">{% trans "Friday"%}</p>
+                                </div>
+                                <div class="opening opening-time">
+                                    <p class="time">{% trans "09.00 am"%}</p>
+                                    <div class="divider"></div>
+                                    <p class="time">{% trans "17.00 pm"%}</p>
+                                </div>
+                            </div>
+                            <p class="num">{{contactaddress.phone_number}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-popup">
+                    <div class="close-popup">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-8 media">
+                            <div id="location-map"></iframe></div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 content">
+                            <h5>{% trans "Address"%}</h5>
+                            <p class="address">{{contactaddress.address}}</p>
+                            <a href="{{contactaddress.address_URL}}"><button class="main-btn">{% trans "Open in Maps"%}</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-popup">
+                    <div class="close-popup">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-7 content">
+                            <h4>{% trans "You have a question for us?"%}</h4>
+                            <p>{% trans 'leave your message below or email us at'%} {{contactaddress.email}}</p>
+                            <form class="text-left form-style-2" method="post" action="{% url 'receivedmessages' %}">
+                                {% csrf_token %}
+                                <div class="form-group required">
+                                    <label for="email">{% trans 'Email address'%}</label>
+                                    <input type="email" id="email" class="form-control" name="email"
+                                        placeholder="johnLP12@gmail.com" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">{% trans 'Message'%}</label>
+                                    <input type="text" id="message" class="form-control" name="message"
+                                        placeholder="Hello, I wanted to know about this particular course called..." />
+                                    <span class="small-text">{% trans "120 characters left"%}</span>
+                                </div>
+                                <button class="main-btn" type="submit">{% trans "Send message"%}</button>
+                            </form>
+                        </div>
+                        <div class="d-none d-lg-block col-lg-5 media">
+                            <img src="{% static 'assets/img/University/Coming_soon/ambar-simpang.png' %}" alt="media image"
+                                class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+  <!-- More blogs -->
+  <section class="more-carousel-1 text-center">
+    <div class="container">
+      <h2 class="margin-bottom-60">{% trans "You might also like..."%}</h2>
+      <div class="blog-carousel-wrap">
+        <div class="blog-carousel-controls">
+          <ul class="carousel-icon">
+            <li class="prev">
+              <i class="flaticon-back"></i>
+              <span class="text">{% trans "Previous post"%}</span>
+            </li>
+            <li class="next">
+              <span class="text">{% trans 'Next post'%}</span>
+              <i class="flaticon-next"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="blog-carousel-2 padding-bottom-60">
+            {% for n in news %}
+            <div class="single-blog-grid-item-01">
+                <div class="thumb">
+                    <img src="{{n.image.url}}" alt="blog image">
+                </div>
+                <div class="content">
+                    <p class="card-text">{{n.created_at|date:'d M, Y'}}</p>
+                    <a href="{% url 'news-detail' pk=n.pk %}" class="title">{{n.title}}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

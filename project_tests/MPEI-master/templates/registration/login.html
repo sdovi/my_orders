@@ -1,0 +1,36 @@
+{% extends 'base/base.html' %}
+{% load i18n %}
+{% block content %}
+  <!-- Signin Section -->
+  <section class="sign-in-section section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6 sign-in">
+          <h2>{% trans "Welcome to MPEI in Tashkent"%}</h2>
+          <div class="sign-with-email">
+            <h6>{% trans "Sign in using your email"%}</h6>
+            <form class="form-style-2" method="post">
+                {% csrf_token %}
+              <div class="form-group required">
+                <label for="email_address">{% trans "Email address"%}</label>
+                <input type="text" id="email_address" class="form-control" name="username" placeholder="johnLP11@gmail.com" required/>
+              </div>
+
+              <div class="form-group required">
+                <label for="password">{% trans "Password"%}</label>
+                <input type="password" id="password" class="form-control" name="password"
+                  placeholder="*****************"required/>
+              </div>
+              <button class="small-btn">{% trans "Sign in"%}</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 sign-up">
+          <div class="content">
+              <p>{% trans "Sign in for downloading your schedule from us!"%}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

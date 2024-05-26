@@ -1,0 +1,101 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+  <!-- Courses -->
+  <div class="courses-section section">
+    <!-- Side form icons -->
+    <div class="fixed-right side-form-icons">
+      <i class="fas fa-phone icon" id="open-opening-popup"></i>
+      <i class="fas fa-map-marker-alt icon" id="open-location-popup"></i>
+      <i class="fas fa-envelope icon" id="open-form-popup"></i>
+    </div>
+    <div class="container">
+        <p>
+          {{query.text|safe}}
+        </p>
+    </div>
+  </div>
+
+  <!-- Popup -->
+  <div class="side-form-popup">
+    <div class="popup-wrapper">
+        <div class="center-popup">
+            <div class="opening-popup">
+                <div class="close-popup">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-8 media">
+                        <img src="{% static 'assets/img/University/students/adolescent-adorable-alone.png' %}" alt="media"
+                            class="img-fluid">
+                    </div>
+                    <div class="col-md-6 col-lg-4 content">
+                        <h5>{% trans "Opening hours"%}</h5>
+                        <div class="openings">
+                            <div class="opening opening-days">
+                                <p class="day">{% trans "Monday"%}</p>
+                                <div class="divider"></div>
+                                <p class="day">{% trans "Friday"%}</p>
+                            </div>
+                            <div class="opening opening-time">
+                                <p class="time">{% trans "09.00 am"%}</p>
+                                <div class="divider"></div>
+                                <p class="time">{% trans "17.00 pm"%}</p>
+                            </div>
+                        </div>
+                        <p class="num">{{contactaddress.phone_number}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="location-popup">
+                <div class="close-popup">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-8 media">
+                        <div id="location-map"></iframe></div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 content">
+                        <h5>{% trans "Address"%}</h5>
+                        <p class="address">{{contactaddress.address}}</p>
+                        <a href="{{contactaddress.address_URL}}"><button class="main-btn">{% trans "Open in Maps"%}</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="form-popup">
+                <div class="close-popup">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-7 content">
+                        <h4>{% trans "You have a question for us?"%}</h4>
+                        <p>{% trans "leave your message below or email us at"%} {{contactaddress.email}}</p>
+                        <form class="text-left form-style-2" method="post" action="{% url 'receivedmessages' %}">
+                            {% csrf_token %}
+                            <div class="form-group required">
+                                <label for="email">{% trans "Email address"%}</label>
+                                <input type="email" id="email" class="form-control" name="email"
+                                    placeholder="johnLP12@gmail.com" />
+                            </div>
+                            <div class="form-group">
+                                <label for="message">{% trans "Message"%}</label>
+                                <input type="text" id="message" class="form-control" name="message"
+                                    placeholder="Hello, I wanted to know about this particular course called..." />
+                                <span class="small-text">{% trans "120 characters left"%}</span>
+                            </div>
+                            <button class="main-btn" type="submit">{% trans "Send message"%}</button>
+                        </form>
+                    </div>
+                    <div class="d-none d-lg-block col-lg-5 media">
+                        <img src="{% static 'assets/img/University/Coming_soon/ambar-simpang.png' %}" alt="media image"
+                            class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

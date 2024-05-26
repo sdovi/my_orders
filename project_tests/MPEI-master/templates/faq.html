@@ -1,0 +1,183 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+  <!-- Breadcrumb -->
+  <section class="breadcrub-style-4 section margin-bottom-0">
+    <div class="container">
+      <div class="heading">
+        <h2>{% trans "FAQs"%}</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Questions -->
+  <div class="questions-section section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-7 col-lg-6 content">
+          <h2>{% trans "Frequently Asked Questions"%}</h2>
+            <div class="accordion-wrapper margin-top-40">
+                <div id="accordion">
+                    {% for q in query %}
+                    <div class="card">
+                        <div class="card-header" 
+                        {% if forloop.counter == 1 %}
+                        id="headingTwo"
+                        {% elif forloop.counter == 2 %}
+                        id="headingThree"
+                        {% elif forloop.counter == 3 %}
+                        id="headingFour"
+                        {% elif forloop.counter == 4 %}
+                        id="headingFive"
+                        {% elif forloop.counter == 5 %}
+                        id="headingSix"
+                        {% elif forloop.counter == 6 %}
+                        id="headingSeven"
+                        {% elif forloop.counter == 7 %}
+                        id="headingEight"
+                        {% elif forloop.counter == 8 %}
+                        id="headingNine"
+                        {% elif forloop.counter == 9 %}
+                        id="headingTen"
+                        {% elif forloop.counter == 10 %}
+                        id="headingEleven"
+                        {% endif %}>
+                            <h5 class="mb-0">
+                                <a class="collapsed" role="button" data-toggle="collapse"
+                                    {% if forloop.counter == 1 %}
+                                    data-target="#collapseTwo"
+                                    {% elif forloop.counter == 2 %}
+                                    data-target="#collapseThree"
+                                    {% elif forloop.counter == 3 %}
+                                    data-target="#collapseFour"
+                                    {% elif forloop.counter == 4 %}
+                                    data-target="#collapseFive"
+                                    {% elif forloop.counter == 5 %}
+                                    data-target="#collapseSix"
+                                    {% elif forloop.counter == 6 %}
+                                    data-target="#collapseSeven"
+                                    {% elif forloop.counter == 7 %}
+                                    data-target="#collapseEight"
+                                    {% elif forloop.counter == 8 %}
+                                    data-target="#collapseNine"
+                                    {% elif forloop.counter == 9 %}
+                                    data-target="#collapseTen"
+                                    {% elif forloop.counter == 10 %}
+                                    data-target="#collapseEleven"
+                                    {% endif %} aria-expanded="false"
+                                    
+                                    {% if forloop.counter == 1 %}
+                                    aria-controls="collapseTwo"
+                                    {% elif forloop.counter == 2 %}
+                                    aria-controls="collapseThree"
+                                    {% elif forloop.counter == 3 %}
+                                    aria-controls="collapseFour"
+                                    {% elif forloop.counter == 4 %}
+                                    aria-controls="collapseFive"
+                                    {% elif forloop.counter == 5 %}
+                                    aria-controls="collapseSix"
+                                    {% elif forloop.counter == 6 %}
+                                    aria-controls="collapseSeven"
+                                    {% elif forloop.counter == 7 %}
+                                    aria-controls="collapseEight"
+                                    {% elif forloop.counter == 8 %}
+                                    aria-controls="collapseNine"
+                                    {% elif forloop.counter == 9 %}
+                                    aria-controls="collapseTen"
+                                    {% elif forloop.counter == 10 %}
+                                    aria-controls="collapseEleven"
+                                    {% endif %}>
+                                    {{q.question}}
+                                </a>
+                            </h5>
+                        </div>
+                        <div {% if forloop.counter == 1 %}
+                            id="collapseTwo"
+                            {% elif forloop.counter == 2 %}
+                            id="collapseThree"
+                            {% elif forloop.counter == 3 %}
+                            id="collapseFour"
+                            {% elif forloop.counter == 4 %}
+                            id="collapseFive"
+                            {% elif forloop.counter == 5 %}
+                            id="collapseSix"
+                            {% elif forloop.counter == 6 %}
+                            id="collapseSeven"
+                            {% elif forloop.counter == 7 %}
+                            id="collapseEight"
+                            {% elif forloop.counter == 8 %}
+                            id="collapseNine"
+                            {% elif forloop.counter == 9 %}
+                            id="collapseTen"
+                            {% elif forloop.counter == 10 %}
+                            id="collapseEleven"
+                            {% endif %}
+                        class="collapse"
+                            {% if forloop.counter == 1 %}
+                            aria-labelledby="headingTwo"
+                            {% elif forloop.counter == 2 %}
+                            aria-labelledby="headingThree"
+                            {% elif forloop.counter == 3 %}
+                            aria-labelledby="headingFour"
+                            {% elif forloop.counter == 4 %}
+                            aria-labelledby="headingFive"
+                            {% elif forloop.counter == 5 %}
+                            aria-labelledby="headingSix"
+                            {% elif forloop.counter == 6 %}
+                            aria-labelledby="headingSeven"
+                            {% elif forloop.counter == 7 %}
+                            aria-labelledby="headingEight"
+                            {% elif forloop.counter == 8 %}
+                            aria-labelledby="headingNine"
+                            {% elif forloop.counter == 9 %}
+                            aria-labelledby="headingTen"
+                            {% elif forloop.counter == 10 %}
+                            aria-labelledby="headingEleven"
+                            {% endif %}
+                            data-parent="#accordion">
+                            <div class="card-body">
+                                {{q.answer}}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-md-block col-md-5 col-lg-6 side-media"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Question Form -->
+  <div class="question-form-section section">
+    <div class="container text-center">
+      <img src="{% static 'assets/img/University/FAQ/discuss-issue.png' %}" alt="discuss-issue">
+      <h2>{% trans "You have another question for us?"%}</h2>
+      <h5>{% trans "Leave your message below"%}</h5>
+
+      <form class="text-left form-style-2" method="post" action="{% url 'contact' %}">
+        {% csrf_token %}
+        <div class="form-row">
+          <div class="form-group col-12 col-lg-6 required">
+            <label for="email">{% trans "Email address"%}</label>
+            <input type="email" id="email" class="form-control" name="email" placeholder="johnLP12@gmail.com" required/>
+          </div>
+          <div class="form-group col-12 col-lg-6 required">
+            <label for="phone_number">{% trans "Phone number"%}</label>
+            <input type="text" id="email" class="form-control" name="phone_number" placeholder="+998 90 000 00 00" required/>
+          </div>
+          <div class="form-group col-12 col-lg-12">
+            <label for="message">{% trans "Message" %}</label>
+            <input type="text" id="message" class="form-control" name="message"
+              placeholder="Hello, I wanted to know about this theme..." />
+            <span class="small-text">{% trans "120 characters left"%}</span>
+          </div>
+        </div>
+        <button class="main-btn" type="submit">{% trans "Submit"%}</button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Gilroy fnmt -->
+    <link href="fonts/Gilroy/stylesheet.css" rel="stylesheet"> 
+    <!-- Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Aos css -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- intlTelInput css -->
+    <link rel="stylesheet" href="style/intlTelInput.css">
+    <!-- Style Css -->
+    <link rel="stylesheet" href="style/index.css">        
+    <title>GTRobot</title>
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="loader-wrap anime">
+        <div class="loader">
+            <div class="inner one"></div>
+            <div class="inner two"></div>
+            <div class="inner three"></div>
+        </div>
+    </div>
+    <!-- Preloader -->
+
+    <div class="wrapper">
+        <!-- Header start -->
+        <header id="header" data-aos="fade-down" data-aos-delay="200">
+            <div class="container">
+                <div class="header_menu">
+                    <div class="logo">
+                        <a href="#"><img src="img/logo_header.svg" alt=""></a>
+                    </div>
+                    <div class="menu_header">
+                        <ul>
+                            <li>
+                                <a href="#">Главная</a>
+                            </li>
+                            <li>
+                                <a href="#">О нас</a>
+                            </li>
+                            <li>
+                                <a href="#">Дорожная карта</a>
+                            </li>
+                            <li>
+                                <a href="#">Игра</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="language">
+                        <div class="custom-select">
+                            <select>
+                              <option value="0">Рус</option>
+                              <option value="1">Uzb</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="header_personal-wrap">
+                        <a href="#!" class="header_personal-link"><img src="img/user.svg" alt=""><span>Выйти из уч. записи</span></a>
+                        <button class="header-bars"><img src="img/bars.svg" alt=""></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header_mob">
+                <div class="header_mob-top">
+                    <div class="language">
+                        <div class="custom-select">
+                            <select>
+                              <option value="0">Рус</option>
+                              <option value="1">Uzb</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="header-close"><img src="img/close.svg" alt=""></button>
+                </div>
+                <div class="menu_header">
+                    <a href="#">Главная</a>
+                    <a href="#">О нас</a>
+                    <a href="#">Дорожная карта</a>
+                    <a href="#">Игра</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+            <div class="header-mob-bg"></div>
+        </header>
+        <!-- Header end -->
+
+        <main>
+            <section class="account">
+                <div class="container">
+                    <div class="account_content">
+                        <div class="title_account main_title" data-aos="fade-left" data-aos-delay="200">
+                            <h1>Личный кабинет:</h1>
+                        </div>
+
+                        <div class="account_block">
+                            <div class="account_block-items" data-aos="fade-up" data-aos-delay="300">
+                                <div class="account_block-item">
+                                    <div class="account_block-purchase">
+                                        <div class="account_block-title">
+                                            <h4>Приобретенные услуги</h4>
+                                            <p>2 услуги приобретено</p>
+                                        </div>
+                                        <div class="account_purches-items">
+                                            <div class="account_purches-item">
+                                                <span>Тех. поддержка</span>
+                                                <b>$200,00</b>
+                                            </div>
+                                            <div class="account_basket-line"></div>
+                                            <div class="account_purches-item">
+                                                <span>Тех. поддержка</span>
+                                                <b>$200,00</b>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="account_block-cart">
+                                        <div class="account_block-title">
+                                            <h4>Ваша корзина</h4>
+                                            <p>5 услуг в вашей корзине</p>
+                                        </div>
+                                        <div class="account_basket-boxs">
+                                            <div class="checkout_basket-box">
+                                                <p>Тех. поддержка</p>
+                                                <div class="basket_total-wrap">
+                                                    <div class="basket_total">
+                                                        <span>300,00</span>
+                                                        <b>$200,00</b>
+                                                    </div>
+                                                    <button><img src="img/x-mark.svg" alt=""></button>
+                                                </div>
+                                            </div>
+                                            <div class="account_basket-line"></div>
+                                            <div class="checkout_basket-box">
+                                                <p>Тех. поддержка</p>
+                                                <div class="basket_total-wrap">
+                                                    <div class="basket_total">
+                                                        <b>$200,00</b>
+                                                    </div>
+                                                    <button><img src="img/x-mark.svg" alt=""></button>
+                                                </div>
+                                            </div>
+                                            <div class="account_basket-line"></div>
+                                            <div class="checkout_basket-box">
+                                                <p>Тех. поддержка</p>
+                                                <div class="basket_total-wrap">
+                                                    <div class="basket_total">
+                                                        <b>$200,00</b>
+                                                    </div>
+                                                    <button><img src="img/x-mark.svg" alt=""></button>
+                                                </div>
+                                            </div>
+                                            <div class="account_basket-line"></div>
+                                            <div class="checkout_basket-box">
+                                                <p>Тех. поддержка</p>
+                                                <div class="basket_total-wrap">
+                                                    <div class="basket_total">
+                                                        <b>$200,00</b>
+                                                    </div>
+                                                    <button><img src="img/x-mark.svg" alt=""></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="account_block-items">
+                                <div class="account_block-item account_block-data" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="account_block-title">
+                                        <h4>Личные данные</h4>
+                                        <img src="img/arrow-down.svg" alt="">
+                                    </div>
+                                    <div class="account_data-boxs">
+                                        <div class="account_data-box">
+                                            <b>Почта:</b>
+                                            <div class="account_data-info">
+                                                <a href="mailto:username@email.com" class="account_data-email">username@email.com</a>
+                                                <img src="img/message-edit.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="account_data-line"></div>
+                                        <div class="account_data-box">
+                                            <b>Пароль:</b>
+                                            <div class="account_data-info">
+                                                <span class="account_data-password">*************</span>
+                                                <img src="img/message-edit.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="account_data-line"></div>
+                                        <div class="account_data-box">
+                                            <b>Номер телефона:</b>
+                                            <div class="account_data-info">
+                                                <a href="tel:+99890 123 45 67" class="account_data-number">+99890 123 45 67</a>
+                                                <img src="img/message-edit.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="account_block-item account_block-code" data-aos="fade-up" data-aos-delay="500">
+                                    <div class="account_block-title">
+                                        <h4>Ваш уникальный код</h4>
+                                    </div>
+                                    <div class="account_code-form">
+                                        <label for="codeForm" class="code_form-label">Этот код служит для аутентификации в боте</label>
+                                        <input type="number" id="codeForm" placeholder="1234567890" class="code_form-input">
+                                        <button class="code_form-copy"><img src="img/copy.svg" alt="" class=""></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+            
+        <!-- Footer start -->
+        <footer class="footer footer-checkout p-0">
+            <div class="container">
+                <div class="footer_block">
+                    <div class="footer_menu">
+                        <a href="#!" class="footer-logo"><img src="img/footer-logo.svg" alt=""></a>
+                        <div class="footer_navs">
+                            <a href="#!" class="footer_nav">Главная</a>
+                            <a href="#!" class="footer_nav">О нас</a>
+                            <a href="#!" class="footer_nav">Дорожная карта</a>
+                            <a href="#!" class="footer_nav">Игра</a>
+                            <a href="#!" class="footer_nav">FAQ</a>
+                        </div>
+                        <a href="#header" class="footer_arrow"><img src="img/arrow-top.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer end -->
+
+    </div>
+
+
+    <!-- Confirmation modal -->
+    <div class="confirmation">
+        <div class="confirmation-modal">
+            <h5 class="confirmation-title">Код подтверждения</h5>
+            <p class="confirmation-text">СМС-код подтверждения отправлен на номер +998 93 004 10 24</p>
+            <form name="verifyForm">
+                <div class="confirmation-input">
+                  <input type="text" name="n1" maxLength="1" requred>
+                  <input type="text" name="n2" maxLength="1" requred>
+                  <input type="text" name="n3" maxLength="1" requred>
+                  <input type="text" name="n4" maxLength="1" requred>
+                  <input type="text" name="n5" maxLength="1" requred>
+                  <input type="text" name="n6" maxLength="1" requred>
+                </div>
+                <button type="submit" class="confirmation-btn">Подтвердить</button>
+            </form>
+            <a href="#!" class="confirmation-link">Не приходит код?</a>
+        </div>
+        <div class="confirmation-modal-bg"></div>
+    </div>
+
+    <!-- Authorization modal -->
+    <div class="authorization">
+        <div class="authorization-modal">
+            <h5 class="authorization-title">Авторизация</h5>
+            <div class="authorization_form">
+                <div class="authorization_form-groups">
+                    <div class="authorization_form-group authorization_form-group1">
+                        <label for="authorizationFrom" class="authorization_form-label">Введите свой номер телефона</label>
+                        <input type="tel" id="authorizationFrom" class="authorization_form-input authorization_form-input1">
+                        <div class="authorization_group-icon">
+                            <img src="img/success2.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="authorization_form-group">
+                        <label for="authorizationFrom2" class="authorization_form-label">Введите пароль</label>
+                        <input type="password" id="authorizationFrom2" placeholder="************" class="authorization_form-input">
+                        <div class="authorization_group-icon">
+                            <img src="img/eye-off.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="authorization_form-btn">Авторизоваться</button>
+
+                <div class="authorization_form-link">
+                    Нет аккаунта? <a href="#!">Зарегистрироваться</a>
+                </div>
+            </div>
+        </div>
+        <div class="authorization-modal-bg"></div>
+    </div>
+
+
+
+    
+    <!-- Jquery js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
+    <!-- Imask js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/7.3.0/imask.min.js"></script>
+    <!-- intlTelInput js -->
+    <script src="js/intlTelInput.js"></script>
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Aos js -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Main js -->
+    <script src="js/main.js"></script>
+</body>
+</html>

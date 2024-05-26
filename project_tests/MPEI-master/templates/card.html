@@ -1,0 +1,45 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+  <!-- Header -->
+  <div class="breadcrub breadcrub-style-3 section">
+    <div class="bg-img">
+      <div class="container">
+        <div class="heading">
+          <h1 class="page-heading">{% trans "Veterans"%}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Card Section -->
+  <div class="section">
+    <div class="container">
+      <h2 class="margin-bottom-50">{% trans "Veteran professors, doctors and etc."%}</h2>
+      {% for h in query %}
+      {% if forloop.first %}
+      <div class="row">
+        {% endif %}
+        <div class="col-lg-4">
+          <div class="course-card-style-2">
+            <div class="card">
+              <img class="card-img-top" src="{{h.image.url}}"
+              alt="Card image cap">
+              <div class="card-img-overlay">
+                <div class="card-body">
+                  <h4>{{h.fullname}}</h4>
+                  <p class="auther">{{h.degree}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
+      </div><div class="row">{% endif %}{% if forloop.last %}</div>{% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+{% endblock %}

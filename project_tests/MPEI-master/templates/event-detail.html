@@ -1,0 +1,54 @@
+{% extends 'base/base.html' %}
+{% load i18n %}
+{% block content %}
+  <!-- Header Four -->
+  <div class="section">
+    <div class="breadcrub-style-4">
+      <div class="container">
+        <div class="heading">
+          <h2>{% trans "Ennouncement"%}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Event Detail -->
+  <div class="event-detail section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="d-none d-md-block col-5 media">
+            <img class="img-fluid" src="{{ad.ad_id.image.url}}">
+        </div>
+        {% if ad.ad_id.name %}
+        <div class="col-12 col-md-7 col-lg-5 content">
+            <h2>{{ ad.ad_id.name }}</h2>
+            <p class="my-5">{{ ad.ad_id.text }}</p>
+            <div class="date">
+                <div class="divider"></div>
+                    <h1>{{ ad.ad_id.created_at|date:'d'}}</h1>
+                    <h5>{{ ad.ad_id.created_at|date:'M Y'}}</h5>
+                </div>
+                <div class="d-flex align-items-center event-infos">
+                <div class="info">
+                <i class="fas fa-clock"></i>
+                <span>{{ ad.ad_id.period }}</span>
+                </div>
+                <div class="info">
+                <i class="fas fa-users"></i>
+                <span>{{ ad.ad_id.count }}</span>
+                </div>
+                <div class="info">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>{{ ad.ad_id.area }}</span>
+                </div>
+            </div>
+            <p>{{ad.text|safe}}</p> 
+        </div>
+        {% else %}
+        <h2>{{ ad }}</h2>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
+   

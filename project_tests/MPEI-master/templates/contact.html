@@ -1,0 +1,109 @@
+{% extends 'base/base.html' %}
+{% load i18n %}
+{% block content %}
+  <!-- Contact Breadcrub -->
+  <div class="contact-breadcrumb section">
+    <div class="row">
+      <div class="col-12 col-lg-7 content">
+        <div class="inner-content">
+          <h1 class='page-heading'>{% trans "Contact us"%}</h1>
+          <p class="d-none d-xl-block">{% trans "Leave a message if you have any question for us. We will fastly contact you and will help you! Thank you for choosing us!"%}</p>
+        </div>
+      </div>
+      <div class="d-none d-lg-block col-5 map">
+        <!-- Map img goes here -->
+        <div class="zoom-in-out">
+          <div class="zoom-in">
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="zoom-out">
+            <i class="fas fa-minus"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Details -->
+  <section class="contact-details-section section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="contact-info">
+            <div class="openings">
+              <h2 class="margin-bottom-30">{% trans "Opening hours"%}</h2>
+              <div class="opening opening-days">
+                <p class="day">{% trans "Monday"%}</p>
+                <div class="divider"></div>
+                <p class="day">{% trans "Friday"%}</p>
+              </div>
+              <div class="opening opening-time">
+                <p class="time">{% trans "09.00 am"%}</p>
+                <div class="divider"></div>
+                <p class="time">{% trans "17.00 pm"%}</p>
+              </div>
+            </div>
+
+            <div class="contact-links">
+              <p class="mail">{{contactaddress.email}}</p>
+              <p class="mail">{{contactaddress.phone_number}}</p>
+              <div class="social-icons">
+                  {% if sociallinks.facebook %}
+                  <a target="_blank" href="{{sociallinks.facebook}}"><i
+                              class="fab fa-facebook-square"></i></a>
+                  {% endif %}
+                  {% if sociallinks.instagram %}
+                  <a target="_blank" href="{{sociallinks.instagram}}"><i
+                              class="fab fa-instagram"></i></a>
+                  {% endif %}
+                  {% if sociallinks.twitter %}
+                  <a target="_blank" href="{{sociallinks.twitter}}"><i class="fab fa-twitter"></i></a>
+                  {% endif %}
+                  {% if sociallinks.linkedin %}
+                  <a target="_blank" href="{{sociallinks.linkedin}}"><i
+                              class="fab fa-linkedin"></i></a>
+                  {% endif %}
+                  {% if sociallinks.youtube %}
+                  <a target="_blank" href="{{sociallinks.youtube}}"><i
+                              class="fab fa-youtube"></i></a>
+                  {% endif %}
+                  {% if sociallinks.telegram %}
+                  <a target="_blank" href="{{sociallinks.telegram}}"><i
+                              class="fab fa-telegram"></i></a>
+                  {% endif %}
+                  {% if sociallinks.whatsapp %}
+                  <a target="_blank" href="{{sociallinks.whatsapp}}"><i
+                              class="fab fa-whatsapp"></i></a>
+                  {% endif %}
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 col-md-6 col-xl-5 message-from">
+          <h2>{% trans "Leave us a message"%}</h2>
+
+          <form class="text-left form-style-2" method="post">
+            {% csrf_token %}
+            <div class="form-group required">
+              <label for="username">{% trans "Phone number"%}</label>
+              <input type="text" id="username" class="form-control" name="phone_number" placeholder="john Louis Perrie" required>
+            </div>
+            <div class="form-group required">
+              <label for="email">{% trans "Email address"%}</label>
+              <input type="email" id="email" class="form-control" name="email" placeholder="johnLP12@gmail.com" required/>
+            </div>
+            <div class="form-group required">
+              <label for="message">{% trans "Message"%}</label>
+              <input type="text" id="message" class="form-control" name="message"
+                placeholder="I wanted to enquire about…" required>
+              <span class="small-text">{% trans "120 characters left"%}</span>
+            </div>
+            <button class="main-btn" type="submit">{% trans "Send message"%}</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

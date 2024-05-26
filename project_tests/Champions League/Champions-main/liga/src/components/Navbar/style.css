@@ -1,0 +1,21 @@
+.navbar-bg{
+    background-color: rgb(43,43,43);
+}
+.container-fluid {
+    width: 95%;
+    margin: auto;
+}
+.nav-txt{
+    color: rgb(194,194,194);
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.nav__txt-link{
+    text-decoration: none;
+}
+.Navbar__register{
+    padding: 5px 15px;
+    border: none;
+    border-radius: 10px;
+    margin-right: 10px;
+}

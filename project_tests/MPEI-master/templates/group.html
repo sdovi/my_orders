@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+{% load i18n %}
+{% block content %}
+  <!-- Header -->
+  <div class="breadcrub breadcrub-style-3 section">
+    <div class="bg-img">
+      <div class="container">
+        <div class="heading">
+          <h1 class="page-heading">{% trans "Groups"%}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Table Section -->
+  <div class="table-section section">
+    <div class="container">
+
+      <!-- Stripped Table -->
+      <div class="stripped-table-part">
+        <h2>{% trans "Choose your group"%}</h2>
+        <table class="table stripped-package-table margin-top-80 margin-bottom-80">
+            <thead>
+              <tr>
+                <th scope="col">{% trans "Groups"%}</th>
+                <th scope="col">{% trans "Schedule"%}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for q in query %}
+              <tr>
+                <th scope="row"><a href="#">{{q.name}}</a></th>
+                <th scope="row">{% for i in q.schedule.all %}<a href="{{ i.schedule.url }}" download>{% trans "Schedule"%}</a>{% endfor %}</th>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

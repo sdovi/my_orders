@@ -1,0 +1,55 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+  <!-- Breadcrumb -->
+  <section class="breadcrub-style-4 section margin-bottom-0">
+    <div class="container">
+      <div class="heading">
+        <h2>{% trans "Scientific Council"%}</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Courses -->
+  <section class="popular-courses section margin-top-0">
+    <div class="container">
+      <h2 class="rotated-text-2 d-none d-md-block">{% trans "Council"%}</h2>
+      <div class="row">
+        {% for q in query %}
+        <div class="col-12 col-md-6 col-lg-3 padding-0">
+          <div class="course-card-style-3">
+            <div class="card">
+              <div class="thumb">
+                <img class="card-img-top"
+                  src="{{q.image.url}}" alt="Card image cap">
+                <div class="hover">
+                  <span class="plus">
+                    <i class="fas fa-plus-circle"></i>
+                  </span>
+                  <div class="hover-inner">
+                    <div class="course-details">
+                      <p>{{q.about}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-img-overlay">
+                <div class="card-body">
+                  <h6>{{q.name}}</h6>
+                  <p>{{q.academic_degree}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+
+      </div>
+    </div>
+  </section>
+
+
+{% endblock %}

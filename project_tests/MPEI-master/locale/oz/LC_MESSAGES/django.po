@@ -1,0 +1,1176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-25 15:18+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\about_university\apps.py:8
+msgid "about_university"
+msgstr "Университет ҳақида"
+
+#: .\about_university\models.py:10 .\about_university\models.py:11
+msgid "User"
+msgstr "Тизим фойдаланувчилари"
+
+#: .\about_university\models.py:14 .\about_university\models.py:24
+#: .\about_university\models.py:33 .\about_university\models.py:42
+#: .\ads\models.py:7 .\ads\models.py:23 .\base\models.py:48 .\base\models.py:77
+#: .\base\models.py:85 .\base\models.py:95 .\education\models.py:44
+#: .\education\models.py:53 .\education\models.py:62 .\education\models.py:71
+#: .\education\models.py:80 .\education\models.py:89 .\education\models.py:98
+#: .\foreign\models.py:6 .\foreign\models.py:28 .\foreign\models.py:38
+#: .\foreign\models.py:47 .\foreign\models.py:56 .\foreign\models.py:65
+#: .\foreign\models.py:74 .\foreign\models.py:83 .\foreign\models.py:92
+#: .\news\models.py:6 .\science_and_innovation\models.py:6
+#: .\science_and_innovation\models.py:15 .\science_and_innovation\models.py:34
+#: .\science_and_innovation\models.py:55 .\structure\models.py:19
+#: .\structure\models.py:45 .\structure\models.py:67 .\structure\models.py:76
+#: .\structure\models.py:85 .\university_life\models.py:6
+#: .\university_life\models.py:15 .\university_life\models.py:24
+#: .\university_life\models.py:33
+msgid "Text"
+msgstr "Матн"
+
+#: .\about_university\models.py:15 .\about_university\models.py:25
+#: .\about_university\models.py:34 .\about_university\models.py:43
+#: .\about_university\models.py:54 .\ads\models.py:12 .\ads\models.py:25
+#: .\base\models.py:56 .\base\models.py:67 .\base\models.py:104
+#: .\education\models.py:7 .\education\models.py:20 .\education\models.py:33
+#: .\education\models.py:45 .\education\models.py:54 .\education\models.py:63
+#: .\education\models.py:72 .\education\models.py:81 .\education\models.py:90
+#: .\education\models.py:99 .\foreign\models.py:7 .\foreign\models.py:17
+#: .\foreign\models.py:30 .\foreign\models.py:39 .\foreign\models.py:48
+#: .\foreign\models.py:57 .\foreign\models.py:66 .\foreign\models.py:75
+#: .\foreign\models.py:84 .\foreign\models.py:93 .\news\models.py:13
+#: .\science_and_innovation\models.py:7 .\science_and_innovation\models.py:16
+#: .\science_and_innovation\models.py:26 .\science_and_innovation\models.py:35
+#: .\science_and_innovation\models.py:45 .\science_and_innovation\models.py:57
+#: .\structure\models.py:11 .\structure\models.py:20 .\structure\models.py:34
+#: .\structure\models.py:47 .\structure\models.py:59 .\structure\models.py:68
+#: .\structure\models.py:77 .\structure\models.py:86
+#: .\university_life\models.py:7 .\university_life\models.py:16
+#: .\university_life\models.py:25 .\university_life\models.py:34
+msgid "created_at"
+msgstr "да ҳосил қилинди"
+
+#: .\about_university\models.py:16 .\about_university\models.py:26
+#: .\about_university\models.py:35 .\about_university\models.py:44
+#: .\about_university\models.py:55 .\ads\models.py:13 .\ads\models.py:26
+#: .\base\models.py:57 .\base\models.py:68 .\base\models.py:105
+#: .\education\models.py:8 .\education\models.py:21 .\education\models.py:34
+#: .\education\models.py:46 .\education\models.py:55 .\education\models.py:64
+#: .\education\models.py:73 .\education\models.py:82 .\education\models.py:91
+#: .\education\models.py:100 .\foreign\models.py:8 .\foreign\models.py:18
+#: .\foreign\models.py:31 .\foreign\models.py:40 .\foreign\models.py:49
+#: .\foreign\models.py:58 .\foreign\models.py:67 .\foreign\models.py:76
+#: .\foreign\models.py:85 .\foreign\models.py:94 .\news\models.py:14
+#: .\science_and_innovation\models.py:8 .\science_and_innovation\models.py:17
+#: .\science_and_innovation\models.py:27 .\science_and_innovation\models.py:36
+#: .\science_and_innovation\models.py:46 .\science_and_innovation\models.py:58
+#: .\structure\models.py:12 .\structure\models.py:21 .\structure\models.py:35
+#: .\structure\models.py:48 .\structure\models.py:60 .\structure\models.py:69
+#: .\structure\models.py:78 .\structure\models.py:87
+#: .\university_life\models.py:8 .\university_life\models.py:17
+#: .\university_life\models.py:26 .\university_life\models.py:35
+msgid "updated_at"
+msgstr "да таҳрирланди"
+
+#: .\about_university\models.py:19 .\about_university\models.py:20
+msgid "Introducing with MPEI"
+msgstr "МПEИ билан таништириш"
+
+#: .\about_university\models.py:29 .\about_university\models.py:30
+msgid "Legal info"
+msgstr "МПEИ юридик маълумотлари"
+
+#: .\about_university\models.py:38 .\about_university\models.py:39
+msgid "WEB resources"
+msgstr "ВEБ манбалари"
+
+#: .\about_university\models.py:47 .\about_university\models.py:48
+msgid "Partners"
+msgstr "Ҳамкорлар"
+
+#: .\about_university\models.py:51
+msgid "Full name"
+msgstr "Тўлиқ исми шариф"
+
+#: .\about_university\models.py:52
+msgid "Degree"
+msgstr "Илмий даража"
+
+#: .\about_university\models.py:53 .\ads\models.py:9 .\foreign\models.py:16
+#: .\news\models.py:8 .\news\models.py:9 .\news\models.py:10
+#: .\news\models.py:11 .\news\models.py:12
+#: .\science_and_innovation\models.py:25 .\science_and_innovation\models.py:44
+#: .\structure\models.py:10 .\structure\models.py:33 .\structure\models.py:58
+msgid "image"
+msgstr "Расм"
+
+#: .\about_university\models.py:58 .\about_university\models.py:59
+msgid "Honorary people"
+msgstr "Фахрий шахслар"
+
+#: .\about_university\models.py:66 .\about_university\models.py:67
+msgid "Qabul link"
+msgstr "Қабул ҳавола"
+
+#: .\ads\apps.py:7 .\ads\models.py:19 .\ads\models.py:20
+msgid "Ads"
+msgstr "Эълонлар"
+
+#: .\ads\models.py:6 .\education\models.py:6 .\education\models.py:18
+#: .\foreign\models.py:15 .\science_and_innovation\models.py:24
+#: .\science_and_innovation\models.py:43 .\structure\models.py:7
+#: .\structure\models.py:28 .\structure\models.py:55
+msgid "Name"
+msgstr "Номи"
+
+#: .\ads\models.py:8
+msgid "period"
+msgstr "муддат"
+
+#: .\ads\models.py:10 .\news\models.py:7
+msgid "count"
+msgstr "санаш"
+
+#: .\ads\models.py:11
+msgid "area"
+msgstr "ҳудуд"
+
+#: .\ads\models.py:24
+msgid "Ad"
+msgstr "Эълонлар"
+
+#: .\ads\models.py:29 .\ads\models.py:30
+msgid "Ad detail"
+msgstr "Эълон тафсилоти"
+
+#: .\ads\views.py:54 .\news\views.py:53
+msgid "Object does not find! Sorry."
+msgstr "Кечирасиз, ҳеч нарса топилмади."
+
+#: .\base\models.py:5
+msgid "Sayt logotipi (nom)"
+msgstr "Сайт логотипи (ном)"
+
+#: .\base\models.py:6
+msgid "Sayt logotipi (rasm)"
+msgstr "Сайт логотипи (расм)"
+
+#: .\base\models.py:9 .\base\models.py:10
+msgid "Site logo"
+msgstr "Сайт логотипи"
+
+#: .\base\models.py:13 .\base\models.py:14 .\base\models.py:15
+#: .\base\models.py:16 .\base\models.py:94 .\news\models.py:5
+msgid "Title"
+msgstr "Сарлавҳа"
+
+#: .\base\models.py:17 .\base\models.py:78 .\base\models.py:86
+msgid "Image"
+msgstr "Расм"
+
+#: .\base\models.py:18
+msgid "Video"
+msgstr "Видео"
+
+#: .\base\models.py:21 .\base\models.py:22
+msgid "Introduction section"
+msgstr "Қўшимча таълим"
+
+#: .\base\models.py:25
+msgid "Instagram link"
+msgstr "Instagram ҳавола"
+
+#: .\base\models.py:26
+msgid "Facebook link"
+msgstr "Facebook ҳавола"
+
+#: .\base\models.py:27
+msgid "Youtube link"
+msgstr "Youtube ҳавола"
+
+#: .\base\models.py:28
+msgid "Twitter link"
+msgstr "Twitter ҳавола"
+
+#: .\base\models.py:29
+msgid "LinkedIn link"
+msgstr "LinkedIn ҳавола"
+
+#: .\base\models.py:30
+msgid "Telegram link"
+msgstr "Telegram ҳавола"
+
+#: .\base\models.py:31
+msgid "Whatsapp link"
+msgstr "Whatsapp ҳавола"
+
+#: .\base\models.py:34 .\base\models.py:35
+msgid "Social Links"
+msgstr "Ижтимоий саҳифа ҳаволалари"
+
+#: .\base\models.py:38 .\base\models.py:55 .\base\models.py:64
+msgid "email"
+msgstr "Электрон почта"
+
+#: .\base\models.py:39 .\base\models.py:65
+msgid "phone_number"
+msgstr "Телефон рақам"
+
+#: .\base\models.py:40
+msgid "address"
+msgstr "Манзил"
+
+#: .\base\models.py:41
+msgid "address URL"
+msgstr "Манзил URL"
+
+#: .\base\models.py:44 .\base\models.py:45
+msgid "Contact Information"
+msgstr "Контакт Маълумотлар"
+
+#: .\base\models.py:51 .\base\models.py:52
+msgid "Join our newsletter text"
+msgstr "Бизнинг янгиликлар саҳифамизга қўшилинг матни"
+
+#: .\base\models.py:60 .\base\models.py:61
+msgid "Join our newsletter answers"
+msgstr "Бизнинг янгиликлар саҳифамизга қўшилинг жавоблари"
+
+#: .\base\models.py:66 .\templates\blog-detail.html:200
+#: .\templates\contact.html:97 .\templates\event.html:134
+#: .\templates\faq.html:172 .\templates\index.html:788
+#: .\templates\universal.html:83
+msgid "Message"
+msgstr "Хабар"
+
+#: .\base\models.py:71 .\base\models.py:72
+msgid "Received messages"
+msgstr "Қабул қилинган хабарлар"
+
+#: .\base\models.py:75
+msgid "Fullname"
+msgstr "Тўлиқ исми шариф"
+
+#: .\base\models.py:76
+msgid "Profession"
+msgstr "Касб"
+
+#: .\base\models.py:81 .\base\models.py:82
+msgid "Testimonials"
+msgstr "Фикрлар"
+
+#: .\base\models.py:89 .\base\models.py:90
+msgid "Why Choose us?"
+msgstr "Нега биз?"
+
+#: .\base\models.py:93
+msgid "whychooseus_id"
+msgstr "Нега биз? Id"
+
+#: .\base\models.py:98 .\base\models.py:99
+msgid "Why Choose us reasons"
+msgstr "Нега биз? сабаблари"
+
+#: .\base\models.py:102
+msgid "Question"
+msgstr "Савол"
+
+#: .\base\models.py:103
+msgid "Answer"
+msgstr "Жавоб"
+
+#: .\base\models.py:108 .\base\models.py:109 .\templates\base\base.html:72
+#: .\templates\base\base.html:170 .\templates\base\base.html:412
+#: .\templates\base\base.html:584 .\templates\faq.html:9
+#: .\templates\index.html:72 .\templates\index.html:169
+#: .\templates\index.html:411 .\templates\index.html:1115
+msgid "FAQs"
+msgstr "ТССлар"
+
+#: .\config\settings.py:133
+msgid "Uzbek Kiril"
+msgstr "Узбек"
+
+#: .\config\settings.py:134
+msgid "Uzbek"
+msgstr "Узбек"
+
+#: .\config\settings.py:135
+msgid "English"
+msgstr "Инглиз"
+
+#: .\config\settings.py:136
+msgid "Russian"
+msgstr "Рус"
+
+#: .\education\apps.py:8
+msgid "education"
+msgstr "Таълим"
+
+#: .\education\models.py:14 .\education\models.py:15 .\education\models.py:19
+#: .\templates\schedule.html:9 .\templates\schedule.html:26
+msgid "Faculties"
+msgstr "Факультетлар"
+
+#: .\education\models.py:27 .\education\models.py:28 .\education\models.py:32
+#: .\templates\group.html:9 .\templates\group.html:26
+msgid "Groups"
+msgstr "Гуруҳлар"
+
+#: .\education\models.py:31
+msgid "Upload file"
+msgstr "Файлни юклаш"
+
+#: .\education\models.py:40 .\education\models.py:41 .\templates\group.html:27
+#: .\templates\group.html:34
+msgid "Schedule"
+msgstr "Жадвал"
+
+#: .\education\models.py:49 .\education\models.py:50
+msgid "Basic education programs"
+msgstr "Асосий таълим дастурлари"
+
+#: .\education\models.py:58 .\education\models.py:59
+msgid "Training results"
+msgstr "Тренинг натижалари"
+
+#: .\education\models.py:67 .\education\models.py:68
+msgid "Additional education"
+msgstr "Қўшимча таълим"
+
+#: .\education\models.py:76 .\education\models.py:77
+msgid "Distance education"
+msgstr "Масофавий таълим"
+
+#: .\education\models.py:85 .\education\models.py:86
+msgid "Employment and internship"
+msgstr "Ишга жойлашиш ва амалиёт"
+
+#: .\education\models.py:94 .\education\models.py:95
+msgid "Final qualifiers"
+msgstr "Якуний саралаш"
+
+#: .\education\models.py:103 .\education\models.py:104
+msgid "Official documents"
+msgstr "Расмий ҳужжатлар"
+
+#: .\foreign\apps.py:7
+msgid "International activity"
+msgstr "Халқаро фаолият"
+
+#: .\foreign\models.py:11 .\foreign\models.py:12
+msgid "Preparing foreigners"
+msgstr "Хорижликларни тайёрлаш"
+
+#: .\foreign\models.py:24 .\foreign\models.py:25
+msgid "Foreign Programs"
+msgstr "Халқаро дастурлар"
+
+#: .\foreign\models.py:34 .\foreign\models.py:35
+msgid "Foreign Program detail"
+msgstr "Халқаро дастур тафсилоти"
+
+#: .\foreign\models.py:43 .\foreign\models.py:44
+msgid "The main organization of the CIS"
+msgstr "МДҲнинг асосий ташкилоти"
+
+#: .\foreign\models.py:52 .\foreign\models.py:53
+msgid "Cooperation"
+msgstr "Хамкорлик"
+
+#: .\foreign\models.py:61 .\foreign\models.py:62
+msgid "Graduates"
+msgstr "Битирувчилар"
+
+#: .\foreign\models.py:70 .\foreign\models.py:71
+msgid "Foreign Programs of Students of MPEI"
+msgstr "МПEИ талабалари халқаро дастурлари"
+
+#: .\foreign\models.py:79 .\foreign\models.py:80 .\templates\base\base.html:582
+#: .\templates\index.html:1113
+msgid "Information"
+msgstr "Маълумотлар"
+
+#: .\foreign\models.py:88 .\foreign\models.py:89
+msgid "Global Energy Association"
+msgstr "\"Глобал энергия\" ассоциацияси"
+
+#: .\foreign\models.py:97 .\foreign\models.py:98
+msgid ""
+"Registration form for participants of the 25th anniversary conference of AMO"
+msgstr ""
+"АМОнинг 25 йиллик юбилей конференцияси иштирокчилари учун рўйхатдан ўтиш"
+
+#: .\news\models.py:17 .\news\models.py:18 .\templates\blog-detail.html:10
+#: .\templates\blog.html:10 .\templates\blog.html:152
+#: .\templates\news-add.html:10 .\templates\search-results.html:47
+msgid "News"
+msgstr "Янгиликлар"
+
+#: .\science_and_innovation\apps.py:8
+msgid "Science and Innovation"
+msgstr "Илм-фан ва инновациялар"
+
+#: .\science_and_innovation\models.py:11 .\science_and_innovation\models.py:12
+msgid "Research and development"
+msgstr "Тадқиқот ва ишланмалар"
+
+#: .\science_and_innovation\models.py:20 .\science_and_innovation\models.py:21
+msgid "Scientific infrastructure"
+msgstr "Илмий инфратузилма"
+
+#: .\science_and_innovation\models.py:30 .\science_and_innovation\models.py:31
+msgid "State scientific certificate"
+msgstr "Давлат илмий сертификати"
+
+#: .\science_and_innovation\models.py:39 .\science_and_innovation\models.py:40
+msgid "Journals"
+msgstr "Журналлар"
+
+#: .\science_and_innovation\models.py:51 .\science_and_innovation\models.py:52
+#: .\templates\scientific-events.html:10 .\templates\search-results.html:66
+msgid "Scientific events"
+msgstr "Илмий тадбирлар"
+
+#: .\science_and_innovation\models.py:61 .\science_and_innovation\models.py:62
+msgid "Scientific event detail"
+msgstr "Илмий тадбир тафсилоти"
+
+#: .\structure\apps.py:7
+msgid "Structure"
+msgstr "Тузилиш"
+
+#: .\structure\models.py:8 .\structure\models.py:29 .\structure\models.py:56
+msgid "Academic degree"
+msgstr "Академик даражаси"
+
+#: .\structure\models.py:9
+msgid "About"
+msgstr "Ҳақида"
+
+#: .\structure\models.py:15 .\structure\models.py:16
+#: .\templates\scient-council.html:9
+msgid "Scientific Council"
+msgstr "Илмий кенгаш"
+
+#: .\structure\models.py:24 .\structure\models.py:25
+msgid "University management"
+msgstr "Университет бошқаруви"
+
+#: .\structure\models.py:30
+msgid "Some text"
+msgstr "Кичик матн"
+
+#: .\structure\models.py:31 .\templates\contact.html:89
+#: .\templates\faq.html:168
+msgid "Phone number"
+msgstr "Телефон рақам"
+
+#: .\structure\models.py:32 .\templates\leadership.html:28
+msgid "Email"
+msgstr "Электрон почта"
+
+#: .\structure\models.py:41 .\structure\models.py:42 .\structure\models.py:46
+msgid "Heads of MPEI Tashkent branch"
+msgstr "МПEИ Тошкент филиали раҳбарлари"
+
+#: .\structure\models.py:51 .\structure\models.py:52
+msgid "Head detail of MPEI Tashkent branch"
+msgstr "МПEИ Тошкент филиали раҳбари тафсилоти"
+
+#: .\structure\models.py:57
+msgid "Position"
+msgstr "Позицияси"
+
+#: .\structure\models.py:63 .\structure\models.py:64
+#: .\templates\the-board-off-directors.html:9
+msgid "The board of directors"
+msgstr "Директорлар кенгаши"
+
+#: .\structure\models.py:72 .\structure\models.py:73
+msgid "Departments and centers of MPEI"
+msgstr "МПEИнинг институтлари ва марказлари"
+
+#: .\structure\models.py:81 .\structure\models.py:82
+msgid "Offices and departments of MPEI"
+msgstr "МПEИнинг офислари ва бўлимлари"
+
+#: .\structure\models.py:90 .\structure\models.py:91
+msgid "Public organizations"
+msgstr "Жамоат ташкилотлари"
+
+#: .\templates\404.html:14
+msgid ""
+"The page you looking for does not exist, has been removed, changed or is "
+"temporarily unavailable"
+msgstr "Сиз излаётган саҳифа мавжуд эмас ёки олиб ташланган"
+
+#: .\templates\404.html:16
+msgid "Back to home"
+msgstr "Бош саҳифага қайтиш"
+
+#: .\templates\base\base.html:54 .\templates\base\base.html:337
+#: .\templates\index.html:54 .\templates\index.html:336
+msgid "Menu"
+msgstr "Меню"
+
+#: .\templates\base\base.html:61 .\templates\base\base.html:266
+#: .\templates\base\base.html:399 .\templates\index.html:61
+#: .\templates\index.html:265 .\templates\index.html:398
+msgid "Logout"
+msgstr "Чиқиш"
+
+#: .\templates\base\base.html:63 .\templates\base\base.html:268
+#: .\templates\base\base.html:403 .\templates\index.html:63
+#: .\templates\index.html:267 .\templates\index.html:402
+msgid "Login"
+msgstr "Кириш"
+
+#: .\templates\base\base.html:66 .\templates\base\base.html:164
+#: .\templates\base\base.html:406 .\templates\index.html:66
+#: .\templates\index.html:163 .\templates\index.html:405
+msgid "Home"
+msgstr "Бош саҳифа"
+
+#: .\templates\base\base.html:68 .\templates\base\base.html:166
+#: .\templates\base\base.html:408 .\templates\index.html:68
+#: .\templates\index.html:165 .\templates\index.html:407
+msgid "Bosh sahifa"
+msgstr "Бош саҳифа"
+
+#: .\templates\base\base.html:69 .\templates\base\base.html:167
+#: .\templates\base\base.html:409 .\templates\base\base.html:576
+#: .\templates\index.html:69 .\templates\index.html:166
+#: .\templates\index.html:408 .\templates\index.html:1107
+msgid "E'lonlar"
+msgstr "Эълонлар"
+
+#: .\templates\base\base.html:70 .\templates\base\base.html:168
+#: .\templates\base\base.html:410 .\templates\base\base.html:585
+#: .\templates\index.html:70 .\templates\index.html:167
+#: .\templates\index.html:409 .\templates\index.html:1116
+msgid "Biz bilan aloqa"
+msgstr "Биз билан алоқа"
+
+#: .\templates\base\base.html:71 .\templates\base\base.html:169
+#: .\templates\base\base.html:411 .\templates\base\base.html:577
+#: .\templates\index.html:71 .\templates\index.html:168
+#: .\templates\index.html:410 .\templates\index.html:1108
+msgid "Yangiliklar"
+msgstr "Янгиликлар"
+
+#: .\templates\base\base.html:76 .\templates\base\base.html:174
+#: .\templates\base\base.html:416 .\templates\index.html:76
+#: .\templates\index.html:173 .\templates\index.html:415
+msgid "Universitet haqida"
+msgstr "Университет ҳаёти"
+
+#: .\templates\base\base.html:78 .\templates\base\base.html:176
+#: .\templates\base\base.html:418 .\templates\base\base.html:575
+#: .\templates\index.html:78 .\templates\index.html:175
+#: .\templates\index.html:417 .\templates\index.html:1106
+msgid "MEI bilan tanishuv"
+msgstr "МПEИ билан танишув"
+
+#: .\templates\base\base.html:79 .\templates\base\base.html:177
+#: .\templates\base\base.html:419 .\templates\base\base.html:586
+#: .\templates\index.html:79 .\templates\index.html:176
+#: .\templates\index.html:418 .\templates\index.html:1117
+msgid "Rasmiy ma'lumot"
+msgstr "Расмий маълумот"
+
+#: .\templates\base\base.html:80 .\templates\base\base.html:178
+#: .\templates\base\base.html:420 .\templates\index.html:80
+#: .\templates\index.html:177 .\templates\index.html:419
+msgid "WEB resurslar"
+msgstr "ВEБ манбалари"
+
+#: .\templates\base\base.html:81 .\templates\base\base.html:179
+#: .\templates\base\base.html:421 .\templates\index.html:81
+#: .\templates\index.html:178 .\templates\index.html:420
+msgid "Hamkorlar"
+msgstr "Ҳамкорлар"
+
+#: .\templates\base\base.html:82 .\templates\base\base.html:180
+#: .\templates\base\base.html:422 .\templates\index.html:82
+#: .\templates\index.html:179 .\templates\index.html:421
+msgid "Shaxslar"
+msgstr "Шахслар"
+
+#: .\templates\base\base.html:86 .\templates\base\base.html:184
+#: .\templates\base\base.html:426 .\templates\index.html:86
+#: .\templates\index.html:183 .\templates\index.html:425
+msgid "Ta'lim"
+msgstr "Таълим"
+
+#: .\templates\base\base.html:88 .\templates\base\base.html:186
+#: .\templates\base\base.html:428 .\templates\index.html:88
+#: .\templates\index.html:185 .\templates\index.html:427
+msgid "Jadval"
+msgstr "Жадвал"
+
+#: .\templates\base\base.html:89 .\templates\base\base.html:187
+#: .\templates\base\base.html:429 .\templates\index.html:89
+#: .\templates\index.html:186 .\templates\index.html:428
+msgid "Asosiy ta'lim dasturlari"
+msgstr "Асосий таълим дастурлари"
+
+#: .\templates\base\base.html:90 .\templates\base\base.html:188
+#: .\templates\base\base.html:430 .\templates\index.html:90
+#: .\templates\index.html:187 .\templates\index.html:429
+msgid "Trening darajalari"
+msgstr "Тренинг даражалари"
+
+#: .\templates\base\base.html:91 .\templates\base\base.html:189
+#: .\templates\base\base.html:431 .\templates\index.html:91
+#: .\templates\index.html:188 .\templates\index.html:430
+msgid "Qo'shimcha ta'lim"
+msgstr "Қўшимча таълим"
+
+#: .\templates\base\base.html:92 .\templates\base\base.html:190
+#: .\templates\base\base.html:432 .\templates\index.html:92
+#: .\templates\index.html:189 .\templates\index.html:431
+msgid "Masofaviy ta'lim"
+msgstr "Масофавий таълим"
+
+#: .\templates\base\base.html:93 .\templates\base\base.html:191
+#: .\templates\base\base.html:433 .\templates\index.html:93
+#: .\templates\index.html:190 .\templates\index.html:432
+msgid "Ishga joylashish va amaliyot"
+msgstr "Ишга жойлашиш ва амалиёт"
+
+#: .\templates\base\base.html:94 .\templates\base\base.html:192
+#: .\templates\base\base.html:434 .\templates\index.html:94
+#: .\templates\index.html:191 .\templates\index.html:433
+msgid "Yakuniy saralash ishlari"
+msgstr "Якуний саралаш ишлари"
+
+#: .\templates\base\base.html:95 .\templates\base\base.html:193
+#: .\templates\base\base.html:435 .\templates\index.html:95
+#: .\templates\index.html:192 .\templates\index.html:434
+msgid "Rasmiy hujjatlar"
+msgstr "Расмий ҳужжатлар"
+
+#: .\templates\base\base.html:99 .\templates\base\base.html:197
+#: .\templates\base\base.html:439 .\templates\index.html:99
+#: .\templates\index.html:196 .\templates\index.html:438
+msgid "Ilm-fan va innovatsiya"
+msgstr "Илм-фан ва инновация"
+
+#: .\templates\base\base.html:101 .\templates\base\base.html:199
+#: .\templates\base\base.html:441 .\templates\index.html:101
+#: .\templates\index.html:198 .\templates\index.html:440
+msgid "Tadqiqot va ishlanmalar"
+msgstr "Тадқиқот ва ишланмалар"
+
+#: .\templates\base\base.html:102 .\templates\base\base.html:200
+#: .\templates\base\base.html:442 .\templates\index.html:102
+#: .\templates\index.html:199 .\templates\index.html:441
+msgid "Ilmiy infratuzilma"
+msgstr "Илмий инфратузилма"
+
+#: .\templates\base\base.html:103 .\templates\base\base.html:201
+#: .\templates\base\base.html:443 .\templates\index.html:103
+#: .\templates\index.html:200 .\templates\index.html:442
+#: .\templates\scientific-cert.html:10
+msgid "Davlat ilmiy sertifikati"
+msgstr "Давлат илмий сертификати"
+
+#: .\templates\base\base.html:104 .\templates\base\base.html:202
+#: .\templates\base\base.html:444 .\templates\index.html:104
+#: .\templates\index.html:201 .\templates\index.html:443
+msgid "Jurnallar"
+msgstr "Журналлар"
+
+#: .\templates\base\base.html:105 .\templates\base\base.html:203
+#: .\templates\base\base.html:445 .\templates\base\base.html:578
+#: .\templates\index.html:105 .\templates\index.html:202
+#: .\templates\index.html:444 .\templates\index.html:1109
+msgid "Ilmiy tadbirlar"
+msgstr "Илмий тадбирлар"
+
+#: .\templates\base\base.html:108 .\templates\base\base.html:209
+#: .\templates\base\base.html:448 .\templates\index.html:108
+#: .\templates\index.html:208 .\templates\index.html:447
+msgid "Xalqaro faoliyat"
+msgstr "Халқаро фаолият"
+
+#: .\templates\base\base.html:110 .\templates\base\base.html:211
+#: .\templates\base\base.html:450 .\templates\index.html:110
+#: .\templates\index.html:210 .\templates\index.html:449
+msgid "Xorijiy fuqarolarni tayyorlash"
+msgstr "Хорижий фуқароларни тайёрлаш"
+
+#: .\templates\base\base.html:111 .\templates\base\base.html:212
+#: .\templates\base\base.html:451 .\templates\index.html:111
+#: .\templates\index.html:211 .\templates\index.html:450
+msgid "Xalqaro dasturlar"
+msgstr "Халқаро дастурлар"
+
+#: .\templates\base\base.html:112 .\templates\base\base.html:213
+#: .\templates\base\base.html:452 .\templates\index.html:112
+#: .\templates\index.html:212 .\templates\index.html:451
+msgid "MDH ning asosiy tashkiloti"
+msgstr "МДҲ нинг асосий ташкилоти"
+
+#: .\templates\base\base.html:113 .\templates\base\base.html:214
+#: .\templates\base\base.html:453 .\templates\index.html:113
+#: .\templates\index.html:213 .\templates\index.html:452
+msgid "Hamkorlik"
+msgstr "Ҳамкорлик"
+
+#: .\templates\base\base.html:114 .\templates\base\base.html:215
+#: .\templates\base\base.html:454 .\templates\index.html:114
+#: .\templates\index.html:214 .\templates\index.html:453
+msgid "Bitiruvchilar"
+msgstr "Битирувчилар"
+
+#: .\templates\base\base.html:115 .\templates\base\base.html:216
+#: .\templates\base\base.html:455 .\templates\index.html:115
+#: .\templates\index.html:215 .\templates\index.html:454
+msgid "MPEI talabalari xalqaro dasturlar haqida"
+msgstr "МПEИ талабалари халқаро дастурлар ҳақида"
+
+#: .\templates\base\base.html:116 .\templates\base\base.html:217
+#: .\templates\base\base.html:456 .\templates\index.html:116
+#: .\templates\index.html:216 .\templates\index.html:455
+msgid "Ma'lumotnoma"
+msgstr "Маълумотнома"
+
+#: .\templates\base\base.html:117 .\templates\base\base.html:218
+#: .\templates\base\base.html:457 .\templates\index.html:117
+#: .\templates\index.html:217 .\templates\index.html:456
+msgid "\"Global energiya\" assotsatsiyasi"
+msgstr "\"Глобал энергия\" ассоциацияси"
+
+#: .\templates\base\base.html:118 .\templates\base\base.html:219
+#: .\templates\base\base.html:458 .\templates\index.html:118
+#: .\templates\index.html:218 .\templates\index.html:457
+msgid ""
+"AMO ning yubiley XXV konferensiyasi ishtirokchilari uchun ro'yxatdan o'tish "
+"shakli"
+msgstr ""
+"АМО нинг юбилей ХХВ конференцияси иштирокчилари учун рўйхатдан ўтиш шакли"
+
+#: .\templates\base\base.html:121 .\templates\base\base.html:222
+#: .\templates\base\base.html:461 .\templates\index.html:121
+#: .\templates\index.html:221 .\templates\index.html:460
+msgid "Universitet hayoti"
+msgstr "Университет ҳаёти"
+
+#: .\templates\base\base.html:123 .\templates\base\base.html:224
+#: .\templates\base\base.html:463 .\templates\index.html:123
+#: .\templates\index.html:223 .\templates\index.html:462
+msgid "Madaniyat"
+msgstr "Маданият"
+
+#: .\templates\base\base.html:124 .\templates\base\base.html:225
+#: .\templates\base\base.html:464 .\templates\index.html:124
+#: .\templates\index.html:224 .\templates\index.html:463
+msgid "Salomatlik va sport"
+msgstr "Саломатлик ва спорт"
+
+#: .\templates\base\base.html:125 .\templates\base\base.html:226
+#: .\templates\base\base.html:465 .\templates\index.html:125
+#: .\templates\index.html:225 .\templates\index.html:464
+msgid "Kampus"
+msgstr "Кампус"
+
+#: .\templates\base\base.html:126 .\templates\base\base.html:227
+#: .\templates\base\base.html:466 .\templates\index.html:126
+#: .\templates\index.html:226 .\templates\index.html:465
+msgid "MPEI da psixologik yordam"
+msgstr "МПEИ да психологик ёрдам"
+
+#: .\templates\base\base.html:129 .\templates\base\base.html:230
+#: .\templates\base\base.html:469 .\templates\index.html:129
+#: .\templates\index.html:229 .\templates\index.html:468
+msgid "Tuzilish"
+msgstr "Тузилиш"
+
+#: .\templates\base\base.html:131 .\templates\base\base.html:232
+#: .\templates\base\base.html:471 .\templates\index.html:131
+#: .\templates\index.html:231 .\templates\index.html:470
+msgid "Ilmiy kengash"
+msgstr "Илмий кенгаш"
+
+#: .\templates\base\base.html:132 .\templates\base\base.html:233
+#: .\templates\base\base.html:472 .\templates\index.html:132
+#: .\templates\index.html:232 .\templates\index.html:471
+msgid "Universitet boshqaruvi"
+msgstr "Университет бошқаруви"
+
+#: .\templates\base\base.html:133 .\templates\base\base.html:234
+#: .\templates\base\base.html:473 .\templates\index.html:133
+#: .\templates\index.html:233 .\templates\index.html:472
+msgid "\"MPEI\" NRU ning Toshkent shahridagi filiali rahbariyati"
+msgstr "«МПEИ» НРУ нинг Тошкент шаҳридаги филиали раҳбарияти"
+
+#: .\templates\base\base.html:134 .\templates\base\base.html:235
+#: .\templates\base\base.html:474 .\templates\index.html:134
+#: .\templates\index.html:234 .\templates\index.html:473
+msgid "Direktorlar kengashi"
+msgstr "Директорлар кенгаши"
+
+#: .\templates\base\base.html:137 .\templates\base\base.html:238
+#: .\templates\base\base.html:477 .\templates\index.html:137
+#: .\templates\index.html:237 .\templates\index.html:476
+msgid "MPEI kafedralari va markazlari"
+msgstr "МПEИ кафедралари ва марказлари"
+
+#: .\templates\base\base.html:138 .\templates\base\base.html:239
+#: .\templates\base\base.html:478 .\templates\index.html:138
+#: .\templates\index.html:238 .\templates\index.html:477
+msgid "Ofislar va bo'limlar"
+msgstr "Офислар ва бўлимлар"
+
+#: .\templates\base\base.html:139 .\templates\base\base.html:240
+#: .\templates\base\base.html:479 .\templates\index.html:139
+#: .\templates\index.html:239 .\templates\index.html:478
+msgid "Jamoat tashkilotlari"
+msgstr "Жамоат ташкилотлари"
+
+#: .\templates\base\base.html:144 .\templates\base\base.html:245
+#: .\templates\base\base.html:484 .\templates\index.html:144
+#: .\templates\index.html:244 .\templates\index.html:483
+msgid "Yangilik qo'shish"
+msgstr ""
+
+#: .\templates\base\base.html:147 .\templates\base\base.html:248
+#: .\templates\base\base.html:487 .\templates\index.html:147
+#: .\templates\index.html:247 .\templates\index.html:486
+msgid "E'lon qo'shish"
+msgstr ""
+
+#: .\templates\base\base.html:153 .\templates\base\base.html:255
+#: .\templates\base\base.html:492 .\templates\index.html:152
+#: .\templates\index.html:254 .\templates\index.html:491
+msgid "Qabul"
+msgstr ""
+
+#: .\templates\base\base.html:207 .\templates\index.html:206
+msgid "Qo'shimcha"
+msgstr "Қўшимча"
+
+#: .\templates\base\base.html:573 .\templates\index.html:1104
+msgid "Links"
+msgstr "Ҳаволалар"
+
+#: .\templates\base\base.html:590 .\templates\index.html:1121
+msgid "Join our newsletter"
+msgstr "Янгилик саҳифамизга қўшилинг"
+
+#: .\templates\base\base.html:595 .\templates\index.html:1126
+msgid "Subscribe"
+msgstr "Обуна бўлиш"
+
+#: .\templates\base\base.html:605 .\templates\index.html:1136
+msgid "© MPEI in Tashkent 2022 All rights reserved. Powered by"
+msgstr "© МПEИ Тошкент филиали. 2022 Барча ҳуқуқлар ҳимояланган. Powered by"
+
+#: .\templates\blog-detail.html:127
+msgid "views"
+msgstr "ўқилди"
+
+#: .\templates\blog-detail.html:132
+msgid "Continue reading"
+msgstr "Ўқишда давом этиш"
+
+#: .\templates\blog-detail.html:152 .\templates\contact.html:34
+#: .\templates\event.html:86 .\templates\index.html:740
+#: .\templates\universal.html:35
+msgid "Opening hours"
+msgstr "Очилиш вақти"
+
+#: .\templates\blog-detail.html:155 .\templates\contact.html:36
+#: .\templates\event.html:89 .\templates\index.html:743
+#: .\templates\universal.html:38
+msgid "Monday"
+msgstr "Душанба"
+
+#: .\templates\blog-detail.html:157 .\templates\contact.html:38
+#: .\templates\event.html:91 .\templates\index.html:745
+#: .\templates\universal.html:40
+msgid "Friday"
+msgstr "Жума"
+
+#: .\templates\blog-detail.html:160 .\templates\contact.html:41
+#: .\templates\event.html:94 .\templates\index.html:748
+#: .\templates\universal.html:43
+msgid "09.00 am"
+msgstr "09.00"
+
+#: .\templates\blog-detail.html:162 .\templates\contact.html:43
+#: .\templates\event.html:96 .\templates\index.html:750
+#: .\templates\universal.html:45
+msgid "17.00 pm"
+msgstr "17.00"
+
+#: .\templates\blog-detail.html:178 .\templates\index.html:766
+#: .\templates\universal.html:61
+msgid "Address"
+msgstr "Манзил"
+
+#: .\templates\blog-detail.html:180 .\templates\event.html:114
+#: .\templates\index.html:768 .\templates\universal.html:63
+msgid "Open in Maps"
+msgstr "Харитада кўриш"
+
+#: .\templates\blog-detail.html:190 .\templates\event.html:124
+#: .\templates\index.html:778 .\templates\universal.html:73
+msgid "You have a question for us?"
+msgstr "Бизга саволингиз борми?"
+
+#: .\templates\blog-detail.html:191 .\templates\event.html:125
+#: .\templates\index.html:779 .\templates\universal.html:74
+msgid "leave your message below or email us at"
+msgstr "хабарингизни қуйида қолдиринг ёки ушбу почтага йўлланг:"
+
+#: .\templates\blog-detail.html:195 .\templates\contact.html:93
+#: .\templates\event.html:129 .\templates\faq.html:164
+#: .\templates\index.html:783 .\templates\registration\login.html:15
+#: .\templates\universal.html:78
+msgid "Email address"
+msgstr "Электрон почта манзил"
+
+#: .\templates\blog-detail.html:203 .\templates\contact.html:100
+#: .\templates\event.html:137 .\templates\faq.html:175
+#: .\templates\index.html:791 .\templates\universal.html:86
+msgid "120 characters left"
+msgstr "120 ҳарф қолди"
+
+#: .\templates\blog-detail.html:205 .\templates\contact.html:102
+#: .\templates\event.html:139 .\templates\index.html:793
+#: .\templates\universal.html:88
+msgid "Send message"
+msgstr "Хабар жўнатиш"
+
+#: .\templates\blog-detail.html:222
+msgid "You might also like..."
+msgstr "Сизга ёқиши mumkin..."
+
+#: .\templates\blog-detail.html:228
+msgid "Previous post"
+msgstr "Олдинги пост"
+
+#: .\templates\blog-detail.html:231
+msgid "Next post"
+msgstr "Кейинги пост"
+
+#: .\templates\blog.html:20 .\templates\event.html:16
+msgid "All"
+msgstr "Ҳаммаси"
+
+#: .\templates\blog.html:21 .\templates\search-results.html:26
+msgid "Ennouncements"
+msgstr "Элонлар"
+
+#: .\templates\card.html:10
+msgid "Veterans"
+msgstr "Фахрийлар"
+
+#: .\templates\card.html:20
+msgid "Veteran professors, doctors and etc."
+msgstr "Фахрий профессор, доктор ва бошқалар."
+
+#: .\templates\contact.html:9
+msgid "Contact us"
+msgstr "Боғланиш"
+
+#: .\templates\contact.html:10
+msgid ""
+"Leave a message if you have any question for us. We will fastly contact you "
+"and will help you! Thank you for choosing us!"
+msgstr ""
+"Агар биз учун бирон бир саволингиз бўлса, хабар қолдиринг. Биз сиз билан "
+"тезда боғланамиз ва сизга ёрдам берамиз! Бизни танлаганингиз учун ташаккур!"
+
+#: .\templates\contact.html:84
+msgid "Leave us a message"
+msgstr "Хабар қолдиринг"
+
+#: .\templates\event-detail.html:9
+msgid "Ennouncement"
+msgstr "Эълон"
+
+#: .\templates\event.html:9 .\templates\index.html:687
+msgid "Announcements"
+msgstr "Эълонлар"
+
+#: .\templates\event.html:64 .\templates\index.html:715
+msgid "Learn more"
+msgstr "Кўпроқ ўқиш"
+
+#: .\templates\faq.html:19
+msgid "Frequently Asked Questions"
+msgstr "Тез-тез сўраладиган саволлар"
+
+#: .\templates\faq.html:157
+msgid "You have another question for us?"
+msgstr "Бошқа саволингиз борми?"
+
+#: .\templates\faq.html:158
+msgid "Leave your message below"
+msgstr "Саволингизни қуйида қолдиринг"
+
+#: .\templates\faq.html:178
+msgid "Submit"
+msgstr "Жўнатиш"
+
+#: .\templates\foreign-programs.html:9
+msgid "Foreign programs"
+msgstr "Халқаро дастурлар"
+
+#: .\templates\group.html:22
+msgid "Choose your group"
+msgstr "Гуруҳингизни танланг"
+
+#: .\templates\index.html:523
+msgid "Explore"
+msgstr "Тадқиқ қилиш"
+
+#: .\templates\index.html:721
+msgid "View all"
+msgstr "Ҳаммасини кўриш"
+
+#: .\templates\index.html:814
+msgid "What our students say"
+msgstr "Бизнинг талабаримизнинг фикрлари"
+
+#: .\templates\index.html:853
+msgid "Why choose us?"
+msgstr "Нима учун бизни танлайсиз?"
+
+#: .\templates\index.html:996
+msgid "From the News"
+msgstr "Янгиликлардан"
+
+#: .\templates\index.html:1017
+msgid "NEWS"
+msgstr "ЯНГИЛИКЛАР"
+
+#: .\templates\index.html:1019
+msgid "Read our news"
+msgstr "янгиликларн"
+
+#: .\templates\index.html:1029
+msgid "Global students"
+msgstr "Халқаро талабалар"
+
+#: .\templates\index.html:1033
+msgid "Courses"
+msgstr "Курслар"
+
+#: .\templates\index.html:1037
+msgid "5 Star Reviews"
+msgstr "Бизнинг баҳо"
+
+#: .\templates\leadership.html:9
+msgid "Leaders"
+msgstr "Раҳбарлар"
+
+#: .\templates\leadership.html:32
+msgid "Tel"
+msgstr "Тел"
+
+#: .\templates\leadership.html:33
+msgid "More"
+msgstr "Кўпроқ"
+
+#: .\templates\leadership.html:43
+msgid "LEADERS"
+msgstr "РАҲБАРЛАР"
+
+#: .\templates\registration\login.html:9
+msgid "Welcome to MPEI in Tashkent"
+msgstr "МПEИ Тошкент филиали раҳбарлари"
+
+#: .\templates\registration\login.html:11
+msgid "Sign in using your email"
+msgstr "Электрон почтангиздан фойдаланинг"
+
+#: .\templates\registration\login.html:20
+msgid "Password"
+msgstr "Парол"
+
+#: .\templates\registration\login.html:24
+msgid "Sign in"
+msgstr "Кириш"
+
+#: .\templates\registration\login.html:30
+msgid "Sign in for downloading your schedule from us!"
+msgstr "Биздан жадвалингизни юклаб олиш учун тизимга киринг!"
+
+#: .\templates\schedule.html:22
+msgid "Choose your faculty"
+msgstr "Факультетингизни танланг"
+
+#: .\templates\scient-council.html:17
+msgid "Council"
+msgstr "Кенгаш"
+
+#: .\templates\scientific-events.html:20
+msgid "Some scientific events"
+msgstr "Илмий тадбирлар"
+
+#: .\templates\search-results.html:9
+msgid "Results"
+msgstr "Натижалар"
+
+#: .\templates\search-results.html:22
+msgid "Ennouncements search results"
+msgstr "Эълонлар бўлими қидирув натижалари"
+
+#: .\templates\search-results.html:42
+msgid "News search results"
+msgstr "Янгиликлар бўлими қидирув натижалари"
+
+#: .\templates\search-results.html:62
+msgid "Scientific events search results"
+msgstr "Илмий тадбирлар бўлими қидирув натижалари"
+
+#: .\templates\the-board-off-directors.html:17
+msgid "Directors"
+msgstr "Директорлар"
+
+#: .\university_life\apps.py:7
+msgid "University life"
+msgstr "Университет ҳаёти"
+
+#: .\university_life\models.py:11 .\university_life\models.py:12
+msgid "Culture"
+msgstr "Маданият"
+
+#: .\university_life\models.py:20 .\university_life\models.py:21
+msgid "Health and sport"
+msgstr "Саломатлик ва спорт"
+
+#: .\university_life\models.py:29 .\university_life\models.py:30
+msgid "Campus"
+msgstr "Кампус"
+
+#: .\university_life\models.py:38 .\university_life\models.py:39
+msgid "Psychological support at MPEI"
+msgstr "МПEИда психологик ёрдам"
+
+#~ msgid "Read it"
+#~ msgstr "Ўқиш"
+
+#~ msgid "Subject"
+#~ msgstr "Мавзу"

@@ -1,0 +1,644 @@
+{% load static %}
+{% load i18n %}
+{% load mytags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Google Fonts -->
+
+
+    <!-- Fab Icon -->
+    <link rel="shortcut icon" type="image/png" href="{% static 'assets/img/logos/mpei.png' %}" />
+    <!-- Fonts Awesome Icons -->
+    <link rel="stylesheet" href="{% static 'assets/fonts/fontawesome/css/all.min.css' %}">
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="{% static 'assets/css/vander/bootstrap.min.css' %}">
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="{% static 'assets/css/vander/animate.css' %}">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="{% static 'assets/css/vander/owl.carousel.min.css' %}">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="{% static 'assets/css/vander/slick.css' %}">
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="{% static 'assets/css/vander/flaticon.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <title>MPEI in Tashkent</title>
+    
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar-section container-fluid d-none d-sm-block">
+        <div class="row">
+            <div class="col-12 nav-container">
+                <!-- Main Nav Start -->
+                <div class="main-nav">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="/">
+                            {% if site_logo %}
+                            <h2>{% if site_logo.logo_image %}<img src="{{ site_logo.logo_image.url }}" alt="Logo">{% endif %} {{ site_logo.logo_name }}</h2>
+                            {% else %}
+                            <h2 style="color:black;"><img src="{% static 'assets/img/logos/mpei.png' %}" alt="Nav Logo"> M<b style="color:red;">P</b>EI</h2>
+                            {% endif %}
+                        </a>
+
+                        <!-- For Tablet Screen -> Start -->
+                        <div class="menu-toggler d-block d-xl-none">
+                            <div class="hamburger-menu">
+                                <a href="#">
+                                    <span>{% trans 'Menu' %}</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="nav-menu-items">
+                            <ul class="nav-items">
+                                {% if user.is_authenticated %}
+                                <li><i class="fas fa-user"></i>{{user.username}} | <a href="{% url 'logout' %}">{% trans 'Logout' %}</a></li>
+                                {% else %}
+                                <li><a href="{% url 'login' %}"><i class="fas fa-user"></i> {% trans 'Login' %}</a></li>
+                                {% endif %}
+                                <li class="menu-item-has-children">
+                                    <a href="#" class="current-menu-item">{% trans 'Home' %}</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/" class="current-menu-item">{% trans 'Bosh sahifa' %}</a></li>
+                                        <li><a href="{% url 'ads' %}">{% trans "E'lonlar" %}</a></li>
+                                        <li><a href="{% url 'contact' %}">{% trans 'Biz bilan aloqa' %}</a></li>
+                                        <li><a href="{% url 'news' %}">{% trans 'Yangiliklar' %}</a></li>
+                                        <li><a href="{% url 'faqs' %}">{% trans 'FAQs' %}</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">{% trans 'Universitet haqida' %}</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{% url 'about_university' slug='introduce-MEI' %}" class="current-menu-item">{% trans 'MEI bilan tanishuv' %}</a></li>
+                                        <li><a href="{% url 'about_university' slug='official-information' %}">{% trans "Rasmiy ma'lumot" %}</a></li>
+                                        <li><a href="{% url 'about_university' slug='WEB-resource' %}">{% trans 'WEB resurslar' %}</a></li>
+                                        <li><a href="{% url 'about_university' slug='partners' %}">{% trans 'Hamkorlar' %}</a></li>
+                                        <li><a href="{% url 'about_university' slug='honorable-p' %}">{% trans 'Shaxslar' %}</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">{% trans "Ta'lim" %}</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{% url 'schedule' %}">{% trans 'Jadval' %}</a></li>
+                                        <li><a href="{% url 'edu-program' slug='edu-program' %}">{% trans "Asosiy ta'lim dasturlari" %}</a></li>
+                                        <li><a href="{% url 'edu-program' slug='training-degree' %}">{% trans "Trening darajalari" %}</a></li>
+                                        <li><a href="{% url 'edu-program' slug='additional-edu' %}">{% trans "Qo'shimcha ta'lim" %}</a></li>
+                                        <li><a href="{% url 'edu-program' slug='dist-edu' %}">{% trans "Masofaviy ta'lim"%}</a></li>
+                                        <li><a href="{% url 'edu-program' slug='emp-and-internship' %}">{% trans "Ishga joylashish va amaliyot"%}</a></li>
+                                        <li><a href="{% url 'edu-program' slug='final-qua' %}">{% trans "Yakuniy saralash ishlari"%}</a></li>
+                                        <li><a href="{% url 'edu-program' slug='official-docs' %}">{% trans "Rasmiy hujjatlar"%}</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">{% trans "Ilm-fan va innovatsiya"%}</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{% url 'science' slug='research' %}">{% trans "Tadqiqot va ishlanmalar"%}</a></li>
+                                        <li><a href="{% url 'science' slug='infrastructure' %}">{% trans "Ilmiy infratuzilma"%}</a></li>
+                                        <li><a href="{% url 'science' slug='scientific-cert' %}">{% trans 'Davlat ilmiy sertifikati'%}</a></li>
+                                        <li><a href="{% url 'science' slug='journals' %}">{% trans 'Jurnallar'%}</a></li>
+                                        <li><a href="{% url 'science' slug='scientific-events' %}">{% trans 'Ilmiy tadbirlar'%}</a></li>
+                                    </ul>
+                                </li>
+                                    <li class="menu-item-has-children"><a href="#">{% trans 'Xalqaro faoliyat'%}</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'international' slug='preparing-foreigners' %}">{% trans 'Xorijiy fuqarolarni tayyorlash'%}</a></li>
+                                            <li><a href="{% url 'international' slug='foreign-programs' %}">{% trans 'Xalqaro dasturlar'%}</a></li>
+                                            <li><a href="{% url 'international' slug='organization-CIS' %}">{% trans 'MDH ning asosiy tashkiloti'%}</a></li>
+                                            <li><a href="{% url 'international' slug='cooperation' %}">{% trans 'Hamkorlik'%}</a></li>
+                                            <li><a href="{% url 'international' slug='graduates' %}">{% trans 'Bitiruvchilar'%}</a></li>
+                                            <li><a href="{% url 'international' slug='students-foreign-program' %}">{% trans 'MPEI talabalari xalqaro dasturlar haqida'%}</a></li>
+                                            <li><a href="{% url 'international' slug='information' %}">{% trans "Ma'lumotnoma"%}</a></li>
+                                            <li><a href="{% url 'international' slug='global-energy-association' %}">{% trans '"Global energiya" assotsatsiyasi'%}</a></li>
+                                            <li><a href="{% url 'international' slug='registration-for-amo' %}">{% trans "AMO ning yubiley XXV konferensiyasi ishtirokchilari uchun ro'yxatdan o'tish shakli"%}</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="#">{% trans 'Universitet hayoti'%}</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'univer-life' slug='culture' %}">{% trans 'Madaniyat'%}</a></li>
+                                            <li><a href="{% url 'univer-life' slug='health-and-sport' %}">{% trans 'Salomatlik va sport'%}</a></li>
+                                            <li><a href="{% url 'univer-life' slug='campus' %}">{% trans 'Kampus'%}</a></li>
+                                            <li><a href="{% url 'univer-life' slug='psycological-support' %}">{% trans 'MPEI da psixologik yordam'%}</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="#">{% trans 'Tuzilish'%}</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'scient-concil' slug='scientific-council' %}">{% trans 'Ilmiy kengash'%}</a></li>
+                                            <li><a href="{% url 'scient-concil' slug='university-management' %}">{% trans 'Universitet boshqaruvi'%}</a></li>
+                                            <li><a href="{% url 'leaders' %}">{% trans '"MPEI" NRU ning Toshkent shahridagi filiali rahbariyati'%}</a></li>
+                                            <li><a href="{% url 'scient-concil' slug='the-board-off-directors' %}">{% trans 'Direktorlar kengashi'%}</a></li>
+                                            {% comment %} <li><a href="{% url 'scient-concil' slug='departments-and-centers' %}">Institutlar</a></li> {% endcomment %}
+                                            <li><a href="{% url 'scient-concil' slug='departments-and-centers' %}">{% trans "MPEI kafedralari va markazlari"%}</a></li>
+                                            <li><a href="{% url 'scient-concil' slug='offices' %}">{% trans "Ofislar va bo'limlar"%}</a>
+                                            <li><a href="{% url 'scient-concil' slug='public-organizations' %}">{% trans "Jamoat tashkilotlari"%}</a></li>
+                                        </ul>
+                                    </li>
+                                    {% if user.is_authenticated and request.user.is_superuser == True %}
+                                    <li class="menu-item">
+                                        <a href="#">{% trans "Yangilik qo'shish" %}</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#">{% trans "E'lon qo'shish" %}</a>
+                                    </li>
+                                    {% endif %}
+                                </li>     
+                                {% if qabullink.qabullink == True %}
+                                <li class="menu-item">
+                                    <a href="https://qabul.mpei.uz">{% trans 'Qabul'%}</a>
+                                </li>       
+                                {% endif %}
+                            </ul>
+                        </div>
+                        <!-- For Tablet Screen -> End -->
+
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <!-- Use "menu-item-has-no-child" class if there is no sub-menu -->
+                                <li class="menu-item-has-children">
+                                    <a href="#" class="current-menu-item">{% trans 'Home' %}</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/" class="current-menu-item">{% trans 'Bosh sahifa' %}</a></li>
+                                        <li><a href="{% url 'ads' %}">{% trans "E'lonlar" %}</a></li>
+                                        <li><a href="{% url 'contact' %}">{% trans 'Biz bilan aloqa' %}</a></li>
+                                        <li><a href="{% url 'news' %}">{% trans 'Yangiliklar' %}</a></li>
+                                        <li><a href="{% url 'faqs' %}">{% trans 'FAQs' %}</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">{% trans 'Universitet haqida' %}</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{% url 'about_university' slug='introduce-MEI' %}" class="current-menu-item">{% trans 'MEI bilan tanishuv' %}</a></li>
+                                        <li><a href="{% url 'about_university' slug='official-information' %}">{% trans "Rasmiy ma'lumot" %}</a></li>
+                                        <li><a href="{% url 'about_university' slug='WEB-resource' %}">{% trans 'WEB resurslar' %}</a></li>
+                                        <li><a href="{% url 'about_university' slug='partners' %}">{% trans 'Hamkorlar' %}</a></li>
+                                        <li><a href="{% url 'about_university' slug='honorable-p' %}">{% trans 'Shaxslar' %}</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">{% trans "Ta'lim" %}</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{% url 'schedule' %}">{% trans 'Jadval' %}</a></li>
+                                        <li><a href="{% url 'edu-program' slug='edu-program' %}">{% trans "Asosiy ta'lim dasturlari" %}</a></li>
+                                        <li><a href="{% url 'edu-program' slug='training-degree' %}">{% trans "Trening darajalari" %}</a></li>
+                                        <li><a href="{% url 'edu-program' slug='additional-edu' %}">{% trans "Qo'shimcha ta'lim" %}</a></li>
+                                        <li><a href="{% url 'edu-program' slug='dist-edu' %}">{% trans "Masofaviy ta'lim"%}</a></li>
+                                        <li><a href="{% url 'edu-program' slug='emp-and-internship' %}">{% trans "Ishga joylashish va amaliyot"%}</a></li>
+                                        <li><a href="{% url 'edu-program' slug='final-qua' %}">{% trans "Yakuniy saralash ishlari"%}</a></li>
+                                        <li><a href="{% url 'edu-program' slug='official-docs' %}">{% trans "Rasmiy hujjatlar"%}</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">{% trans "Ilm-fan va innovatsiya"%}</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{% url 'science' slug='research' %}">{% trans "Tadqiqot va ishlanmalar"%}</a></li>
+                                        <li><a href="{% url 'science' slug='infrastructure' %}">{% trans "Ilmiy infratuzilma"%}</a></li>
+                                        <li><a href="{% url 'science' slug='scientific-cert' %}">{% trans 'Davlat ilmiy sertifikati'%}</a></li>
+                                        <li><a href="{% url 'science' slug='journals' %}">{% trans 'Jurnallar'%}</a></li>
+                                        <li><a href="{% url 'science' slug='scientific-events' %}">{% trans 'Ilmiy tadbirlar'%}</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">{% trans "Qo'shimcha"%}</a>
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item-has-children"><a href="#">{% trans 'Xalqaro faoliyat'%}</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="{% url 'international' slug='preparing-foreigners' %}">{% trans 'Xorijiy fuqarolarni tayyorlash'%}</a></li>
+                                                <li><a href="{% url 'international' slug='foreign-programs' %}">{% trans 'Xalqaro dasturlar'%}</a></li>
+                                                <li><a href="{% url 'international' slug='organization-CIS' %}">{% trans 'MDH ning asosiy tashkiloti'%}</a></li>
+                                                <li><a href="{% url 'international' slug='cooperation' %}">{% trans 'Hamkorlik'%}</a></li>
+                                                <li><a href="{% url 'international' slug='graduates' %}">{% trans 'Bitiruvchilar'%}</a></li>
+                                                <li><a href="{% url 'international' slug='students-foreign-program' %}">{% trans 'MPEI talabalari xalqaro dasturlar haqida'%}</a></li>
+                                                <li><a href="{% url 'international' slug='information' %}">{% trans "Ma'lumotnoma"%}</a></li>
+                                                <li><a href="{% url 'international' slug='global-energy-association' %}">{% trans '"Global energiya" assotsatsiyasi'%}</a></li>
+                                                <li><a href="{% url 'international' slug='registration-for-amo' %}">{% trans "AMO ning yubiley XXV konferensiyasi ishtirokchilari uchun ro'yxatdan o'tish shakli"%}</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub-menu-item-has-children"><a href="#">{% trans 'Universitet hayoti'%}</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="{% url 'univer-life' slug='culture' %}">{% trans 'Madaniyat'%}</a></li>
+                                                <li><a href="{% url 'univer-life' slug='health-and-sport' %}">{% trans 'Salomatlik va sport'%}</a></li>
+                                                <li><a href="{% url 'univer-life' slug='campus' %}">{% trans 'Kampus'%}</a></li>
+                                                <li><a href="{% url 'univer-life' slug='psycological-support' %}">{% trans 'MPEI da psixologik yordam'%}</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub-menu-item-has-children"><a href="#">{% trans 'Tuzilish'%}</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="{% url 'scient-concil' slug='scientific-council' %}">{% trans 'Ilmiy kengash'%}</a></li>
+                                                <li><a href="{% url 'scient-concil' slug='university-management' %}">{% trans 'Universitet boshqaruvi'%}</a></li>
+                                                <li><a href="{% url 'leaders' %}">{% trans '"MPEI" NRU ning Toshkent shahridagi filiali rahbariyati'%}</a></li>
+                                                <li><a href="{% url 'scient-concil' slug='the-board-off-directors' %}">{% trans 'Direktorlar kengashi'%}</a></li>
+                                                {% comment %} <li><a href="{% url 'scient-concil' slug='departments-and-centers' %}">Institutlar</a></li> {% endcomment %}
+                                                <li><a href="{% url 'scient-concil' slug='departments-and-centers' %}">{% trans "MPEI kafedralari va markazlari"%}</a></li>
+                                                <li><a href="{% url 'scient-concil' slug='offices' %}">{% trans "Ofislar va bo'limlar"%}</a>
+                                                <li><a href="{% url 'scient-concil' slug='public-organizations' %}">{% trans "Jamoat tashkilotlari"%}</a></li>
+                                            </ul>
+                                        </li>
+                                        {% if user.is_authenticated and request.user.is_superuser == True %}
+                                        <li class="sub-menu-item">
+                                            <a href="#">{% trans "Yangilik qo'shish" %}</a>
+                                        </li>
+                                        <li class="sub-menu-item">
+                                            <a href="#">{% trans "E'lon qo'shish" %}</a>
+                                        </li>
+                                        {% endif %}
+                                    </ul>
+                                </li>
+                                {% if qabullink.qabullink == True %}
+                                <li class="menu-item">
+                                    <a href="https://qabul.mpei.uz">{% trans 'Qabul'%}</a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- Side Nav Start -->
+                <div class="side-nav d-flex align-items-center">
+                    {% if request.user.is_authenticated %}
+                    <i class="fas fa-user"> </i>{{user.username}}<a href="{% url 'logout' %}">{% trans 'Logout'%}</a>
+                    {% else %}
+                    <a class="auth" href="{% url 'login' %}">{% trans 'Login'%}</a>
+                    {% endif %}
+                    <div class="location">
+                        {% get_current_language as lang %}
+                        {% get_available_languages as langs %}
+                        <div class="dropdown">
+                            <button class="active" type="button" id="dropdownMenu3" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img class="flag" src="
+                                {% if lang == 'oz' %}
+                                {% static 'assets/img/icons/Flags/uzbekistan.png' %}
+                                {% elif lang == 'uz' %}
+                                {% static 'assets/img/icons/Flags/uzbekistan.png' %}
+                                {% elif lang == 'en' %}
+                                {% static 'assets/img/icons/Flags/united-kingdom.png' %}
+                                {% elif lang == 'ru' %}
+                                {% static 'assets/img/icons/Flags/russia.png' %}
+                                {% endif %}
+                                " alt="cuntry flag" />
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                                {% for l in langs %}
+                                {% if l.0 != lang %}
+                                <a href="{% get_url_lang request l.0 %}">
+                                    <button class="dropdown-item" type="button"><img src="
+                                        {% if l.0 == 'uz' or l.0 == 'oz' %}
+                                        {% static 'assets/img/icons/Flags/uzbekistan.png' %}
+                                        {% elif l.0 == 'en' %}
+                                        {% static 'assets/img/icons/Flags/united-kingdom.png' %}
+                                        {% elif l.0 == 'ru' %}
+                                        {% static 'assets/img/icons/Flags/russia.png' %}
+                                        {% endif %}
+                                        " alt="flag image" class="flag" />
+                                    </button>
+                                </a>
+                                {% endif %}
+                                {% endfor %}                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="search search-active">
+                        <i class="flaticon-search"></i>
+                    </div> -->
+                </div>
+            </div>
+
+            <!-- search start -->
+            <div class="search-content-wrap main-search-active">
+                <div class="search-content">
+                    <form class="search-form" method="post" action="{% url 'search-results' %}">
+                        {% csrf_token %}
+                        <input type="text" placeholder="Type Something To Search" name="search">
+                    </form>
+
+                    <a class="search-close d-flex justify-content-center align-items-center">
+                        <i class="fas fa-times icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar for mobile screen -->
+    <div class="navbar-mobile sticky-bar d-block d-sm-none">
+        <div class="container-fluid">
+            <div class="menu-toggler">
+                <div class="hamburger-menu">
+                    <a href="#">
+                        <span>{% trans 'Menu'%}</span>
+                    </a>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="logo">
+                {% if site_logo %}
+                <a href="/">{% if site_logo.logo_image %}<img src="{{ site_logo.logo_image.url }}" alt="logo" class="img-fluid">{% endif %} {{ site_logo.logo_name }}</a>
+                {% else %}
+                <a><img src="{% static 'assets/img/logos/mpei.png' %}" alt="Logo" class="img-fluid"> M<b style="color:red;">P</b>EI</a>
+                {% endif %}
+            </div>
+            <div class="divider"></div>
+            <div class="language">
+                <div class="dropdown">
+                    {% get_current_language as lang %}
+                    {% get_available_languages as langs %}
+                    <button class="active" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img class="flag" src="
+                        {% if lang == 'oz' %}
+                        {% static 'assets/img/icons/Flags/uzbekistan.png' %}
+                        {% elif lang == 'uz' %}
+                        {% static 'assets/img/icons/Flags/uzbekistan.png' %}
+                        {% elif lang == 'en' %}
+                        {% static 'assets/img/icons/Flags/united-kingdom.png' %}
+                        {% elif lang == 'ru' %}
+                        {% static 'assets/img/icons/Flags/russia.png' %}
+                        {% endif %}
+                        " alt="cuntry flag" />
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        {% for l in langs %}
+                        {% if l.0 != lang %}
+                        <a href="{% get_url_lang request l.0 %}">
+                            <button class="dropdown-item" type="button"><img src="
+                                {% if l.0 == 'uz' or l.0 == 'oz' %}
+                                {% static 'assets/img/icons/Flags/uzbekistan.png' %}
+                                {% elif l.0 == 'en' %}
+                                {% static 'assets/img/icons/Flags/united-kingdom.png' %}
+                                {% elif l.0 == 'ru' %}
+                                {% static 'assets/img/icons/Flags/russia.png' %}
+                                {% endif %}
+                                " alt="flag image" class="flag" />
+                            </button>
+                        </a>
+                        {% endif %}
+                        {% endfor %}                
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <!-- <div class="search">
+                <i class="flaticon-search"></i>
+            </div> -->
+        </div>
+
+        <div class="nav-menu-items">
+            <ul class="nav-items">
+                {% if user.is_authenticated %}
+                <li class="menu-item-has-children"><i class="fas fa-user">{{user.username}}</i> 
+                    <ul class="sub-menu">
+                        <li><a href="{% url 'logout' %}" class="current-menu-item">{% trans 'Logout'%}</a></li>
+                    </ul>
+                </li>
+                {% else %}
+                <li><a href="{% url 'login' %}"><i class="fas fa-user"></i> {% trans 'Login'%}</a></li>
+                {% endif %}
+                <li class="menu-item-has-children">
+                    <a href="#" class="current-menu-item">{% trans 'Home' %}</a>
+                    <ul class="sub-menu">
+                        <li><a href="/" class="current-menu-item">{% trans 'Bosh sahifa' %}</a></li>
+                        <li><a href="{% url 'ads' %}">{% trans "E'lonlar" %}</a></li>
+                        <li><a href="{% url 'contact' %}">{% trans 'Biz bilan aloqa' %}</a></li>
+                        <li><a href="{% url 'news' %}">{% trans 'Yangiliklar' %}</a></li>
+                        <li><a href="{% url 'faqs' %}">{% trans 'FAQs' %}</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="#">{% trans 'Universitet haqida' %}</a>
+                    <ul class="sub-menu">
+                        <li><a href="{% url 'about_university' slug='introduce-MEI' %}" class="current-menu-item">{% trans 'MEI bilan tanishuv' %}</a></li>
+                        <li><a href="{% url 'about_university' slug='official-information' %}">{% trans "Rasmiy ma'lumot" %}</a></li>
+                        <li><a href="{% url 'about_university' slug='WEB-resource' %}">{% trans 'WEB resurslar' %}</a></li>
+                        <li><a href="{% url 'about_university' slug='partners' %}">{% trans 'Hamkorlar' %}</a></li>
+                        <li><a href="{% url 'about_university' slug='honorable-p' %}">{% trans 'Shaxslar' %}</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="#">{% trans "Ta'lim" %}</a>
+                    <ul class="sub-menu">
+                        <li><a href="{% url 'schedule' %}">{% trans 'Jadval' %}</a></li>
+                        <li><a href="{% url 'edu-program' slug='edu-program' %}">{% trans "Asosiy ta'lim dasturlari" %}</a></li>
+                        <li><a href="{% url 'edu-program' slug='training-degree' %}">{% trans "Trening darajalari" %}</a></li>
+                        <li><a href="{% url 'edu-program' slug='additional-edu' %}">{% trans "Qo'shimcha ta'lim" %}</a></li>
+                        <li><a href="{% url 'edu-program' slug='dist-edu' %}">{% trans "Masofaviy ta'lim"%}</a></li>
+                        <li><a href="{% url 'edu-program' slug='emp-and-internship' %}">{% trans "Ishga joylashish va amaliyot"%}</a></li>
+                        <li><a href="{% url 'edu-program' slug='final-qua' %}">{% trans "Yakuniy saralash ishlari"%}</a></li>
+                        <li><a href="{% url 'edu-program' slug='official-docs' %}">{% trans "Rasmiy hujjatlar"%}</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="#">{% trans "Ilm-fan va innovatsiya"%}</a>
+                    <ul class="sub-menu">
+                        <li><a href="{% url 'science' slug='research' %}">{% trans "Tadqiqot va ishlanmalar"%}</a></li>
+                        <li><a href="{% url 'science' slug='infrastructure' %}">{% trans "Ilmiy infratuzilma"%}</a></li>
+                        <li><a href="{% url 'science' slug='scientific-cert' %}">{% trans 'Davlat ilmiy sertifikati'%}</a></li>
+                        <li><a href="{% url 'science' slug='journals' %}">{% trans 'Jurnallar'%}</a></li>
+                        <li><a href="{% url 'science' slug='scientific-events' %}">{% trans 'Ilmiy tadbirlar'%}</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">{% trans 'Xalqaro faoliyat'%}</a>
+                    <ul class="sub-menu">
+                        <li><a href="{% url 'international' slug='preparing-foreigners' %}">{% trans 'Xorijiy fuqarolarni tayyorlash'%}</a></li>
+                        <li><a href="{% url 'international' slug='foreign-programs' %}">{% trans 'Xalqaro dasturlar'%}</a></li>
+                        <li><a href="{% url 'international' slug='organization-CIS' %}">{% trans 'MDH ning asosiy tashkiloti'%}</a></li>
+                        <li><a href="{% url 'international' slug='cooperation' %}">{% trans 'Hamkorlik'%}</a></li>
+                        <li><a href="{% url 'international' slug='graduates' %}">{% trans 'Bitiruvchilar'%}</a></li>
+                        <li><a href="{% url 'international' slug='students-foreign-program' %}">{% trans 'MPEI talabalari xalqaro dasturlar haqida'%}</a></li>
+                        <li><a href="{% url 'international' slug='information' %}">{% trans "Ma'lumotnoma"%}</a></li>
+                        <li><a href="{% url 'international' slug='global-energy-association' %}">{% trans '"Global energiya" assotsatsiyasi'%}</a></li>
+                        <li><a href="{% url 'international' slug='registration-for-amo' %}">{% trans "AMO ning yubiley XXV konferensiyasi ishtirokchilari uchun ro'yxatdan o'tish shakli"%}</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">{% trans 'Universitet hayoti'%}</a>
+                    <ul class="sub-menu">
+                        <li><a href="{% url 'univer-life' slug='culture' %}">{% trans 'Madaniyat'%}</a></li>
+                        <li><a href="{% url 'univer-life' slug='health-and-sport' %}">{% trans 'Salomatlik va sport'%}</a></li>
+                        <li><a href="{% url 'univer-life' slug='campus' %}">{% trans 'Kampus'%}</a></li>
+                        <li><a href="{% url 'univer-life' slug='psycological-support' %}">{% trans 'MPEI da psixologik yordam'%}</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">{% trans 'Tuzilish'%}</a>
+                    <ul class="sub-menu">
+                        <li><a href="{% url 'scient-concil' slug='scientific-council' %}">{% trans 'Ilmiy kengash'%}</a></li>
+                        <li><a href="{% url 'scient-concil' slug='university-management' %}">{% trans 'Universitet boshqaruvi'%}</a></li>
+                        <li><a href="{% url 'leaders' %}">{% trans '"MPEI" NRU ning Toshkent shahridagi filiali rahbariyati'%}</a></li>
+                        <li><a href="{% url 'scient-concil' slug='the-board-off-directors' %}">{% trans 'Direktorlar kengashi'%}</a></li>
+                        {% comment %} <li><a href="{% url 'scient-concil' slug='departments-and-centers' %}">Institutlar</a></li> {% endcomment %}
+                        <li><a href="{% url 'scient-concil' slug='departments-and-centers' %}">{% trans "MPEI kafedralari va markazlari"%}</a></li>
+                        <li><a href="{% url 'scient-concil' slug='offices' %}">{% trans "Ofislar va bo'limlar"%}</a>
+                        <li><a href="{% url 'scient-concil' slug='public-organizations' %}">{% trans "Jamoat tashkilotlari"%}</a></li>
+                    </ul>
+                </li>
+                {% if user.is_authenticated and request.user.is_superuser == True %}
+                <li class="menu-item">
+                    <a href="#">{% trans "Yangilik qo'shish" %}</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">{% trans "E'lon qo'shish" %}</a>
+                </li>
+                {% endif %}
+                {% if qabullink.qabullink == True %}
+                <li class="menu-item">
+                    <a href="https://qabul.mpei.uz">{% trans 'Qabul'%}</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+
+        <div class="mobile-search-wrapper">
+            <form method="post" action="{% url 'search-results' %}">
+                {% csrf_token %}
+                <input type="text" placeholder="Type something to start" name="search">
+            </form>
+        </div>
+    </div>
+
+
+    {% block content %}
+
+    {% endblock %} 
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container-fluid">
+            <div class="divider"></div>
+            <div class="row footer-content">
+                <div class="col-12 col-md-6 col-lg-4">
+                    {% if site_logo %}
+                        <h2>{% if site_logo.logo_image %}<img src="{{ site_logo.logo_image.url }}" alt="Logo">{% endif %} {{ site_logo.logo_name }}</h2>
+                        {% else %}
+                        <h2><img class="brand-logo" src="{% static 'assets/img/logos/mpei.png' %}" alt="University Logo"> MPEI</h2>
+                    {% endif %}
+                    <div class="contact-links">
+                        {% if contactaddress.email %}
+                        <div class="link">
+                            <i class="fas fa-envelope"></i>
+                            <p>{{contactaddress.email}}</p>
+                        </div>
+                        {% endif %}
+                        {% if contactaddress.phone_number %}
+                        <div class="link">
+                            <i class="fas fa-phone"></i>
+                            <p>{{contactaddress.phone_number}}</p>
+                        </div>
+                        {% endif %}
+                        {% if contactaddress.address %}
+                        <div class="link">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>{{contactaddress.address}}</p>
+                        </div>
+                        {% endif %}
+                        <div class="link social-icons">
+                            {% if sociallinks.facebook %}
+                            <a target="_blank" href="{{sociallinks.facebook}}"><i
+                                        class="fab fa-facebook-square"></i></a>
+                            {% endif %}
+                            {% if sociallinks.instagram %}
+                            <a target="_blank" href="{{sociallinks.instagram}}"><i
+                                        class="fab fa-instagram"></i></a>
+                            {% endif %}
+                            {% if sociallinks.twitter %}
+                            <a target="_blank" href="{{sociallinks.twitter}}"><i class="fab fa-twitter"></i></a>
+                            {% endif %}
+                            {% if sociallinks.linkedin %}
+                            <a target="_blank" href="{{sociallinks.linkedin}}"><i
+                                        class="fab fa-linkedin"></i></a>
+                            {% endif %}
+                            {% if sociallinks.youtube %}
+                            <a target="_blank" href="{{sociallinks.youtube}}"><i
+                                        class="fab fa-youtube"></i></a>
+                            {% endif %}
+                            {% if sociallinks.telegram %}
+                            <a target="_blank" href="{{sociallinks.telegram}}"><i
+                                        class="fab fa-telegram"></i></a>
+                            {% endif %}
+                            {% if sociallinks.whatsapp %}
+                            <a target="_blank" href="{{sociallinks.whatsapp}}"><i
+                                        class="fab fa-whatsapp"></i></a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h5>{% trans 'Links'%}</h5>
+                    <ul>
+                        <li><a href="{% url 'about_university' slug='introduce-MEI' %}">{% trans 'MEI bilan tanishuv'%}</a></li>
+                        <li><a href="{% url 'ads' %}">{% trans "E'lonlar"%}</a></li>
+                        <li><a href="{% url 'news' %}">{% trans 'Yangiliklar'%}</a></li>
+                        <li><a href="{% url 'science' slug='scientific-events' %}">{% trans 'Ilmiy tadbirlar'%}</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h5>{% trans 'Information'%}</h5>
+                    <ul>
+                        <li><a href="{% url 'faqs' %}">{% trans "FAQs"%}</a></li>
+                        <li><a href="{% url 'contact' %}">{% trans 'Biz bilan aloqa'%}</a></li>
+                        <li><a href="{% url 'about_university' slug='official-information' %}">{% trans "Rasmiy ma'lumot"%}</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 newsletter">
+                    <h5>{% trans 'Join our newsletter'%}</h5>
+                    <p>{{newslettertext.text}}</p>
+                    <form class="d-flex justify-content-between" method="post" action="{% url 'newsletterform' %}">
+                        {% csrf_token %}
+                        <input type="email" name="email" placeholder="Enter your email address here">
+                        <button type="submit" class="main-btn">{% trans 'Subscribe'%}</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="copyright">
+            <div class="container-fluid">
+                <p>{% trans "© MPEI in Tashkent 2022 All rights reserved. Powered by"%}
+                    <a href="https://t.me/Sdovi_Money" target="_blank">Avoure software.</a>.</p>
+            </div>
+            <!-- Scroll Top Start -->
+            <a id="scroll-top" class="d-flex justify-content-center align-items-center">
+                <i class="flaticon-up-arrow"></i>
+            </a>
+        </div>
+    </footer>
+
+
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JQuery Link -->
+    <script src="{% static 'assets/js/vander/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/vander/jquery-migrate-1.4.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/vander/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/vander/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/vander/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/vander/slick.min.js' %}"></script>
+    <script src="{% static 'assets/js/vander/waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/vander/jQuery.rcounter.js' %}"></script>
+
+    <!-- Google maps geolocation -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqFuLx8S7A8eianoUhkYMeXpGPvsXp1NM&callback=initMap"
+        async defer></script>
+    <!-- Custom Script -->
+    <script src="{% static 'assets/js/map.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/js/slider.js' %}"></script>
+    <script src="{% static 'assets/js/toggler.js' %}"></script>
+    <script src="{% static 'assets/js/vPlayer.js' %}"></script>
+    <script src="{% static 'assets/js/nav-scroll.js' %}"></script>
+</body>
+
+</html>

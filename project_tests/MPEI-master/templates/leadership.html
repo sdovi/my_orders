@@ -1,0 +1,52 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+  <!-- Breadcrumb -->
+  <section class="breadcrub-style-4 section margin-bottom-0">
+    <div class="container">
+      <div class="heading">
+        <h2>{% trans "Leaders"%}</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Courses -->
+  <section class="all-courses section">
+    <div class="container">
+
+      <div class="course-wrapper">
+        <div class="row">
+          {% for q in query %}
+          <div class="col-12 col-md-4">
+            <div class="course-card-style-2">
+              <div class="card">
+                <img class="card-img-top" src="{{q.image.url}}" alt="Leader image">
+                <div class="card-img-overlay">
+                  <div class="card-body">
+                    <h3>{{q.name}}</h3>
+                    <p class="auther"><b>{% trans "Email"%}:</b> {{q.email}}</p>
+                    <p class="details">{{q.some_text}}</p>
+
+                    <div class="more">
+                      <h5 class="price"><sup>{% trans "Tel"%}:</sup> {{q.phone_number}}</h5>
+                      <a href="{% url 'leader-detail' pk=q.pk %}" class="small-btn">{% trans "More"%}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <h1 class="rotated-text d-none d-lg-block">{% trans "LEADERS"%}</h1>
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+{% endblock %}
