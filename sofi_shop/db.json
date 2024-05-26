@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "photo": "./Img/Sect1_img/Rectangle 45.jpg",
+      "name": "HTML Fundamental",
+      "desk": "Ташкентская область",
+      "price": 10000000
+    },
+    {
+      "id": "2",
+      "photo": "./Img/Sect1_img/Rectangle 45.jpg",
+      "name": "HTML Fundamental2",
+      "desk": "Ташкентская область",
+      "price": 10000000
+    },
+    {
+      "id": "3",
+      "photo": "./Img/Sect1_img/Rectangle 45.jpg",
+      "name": "HTML Fundamental3",
+      "desk": "Ташкентская область",
+      "price": 10000000
+    },
+    {
+      "id": "122",
+      "photo": "ссылка на фото или путь",
+      "name": "имя продукта",
+      "desk": "описание ",
+      "price": "1231123123"
+    }
+  ]
+}

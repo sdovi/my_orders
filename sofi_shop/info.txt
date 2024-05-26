@@ -1,0 +1,144 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const favoritesContainer = document.querySelector('.sectfavor__item.row');
+
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    const renderFavorites = () => {
+        favoritesContainer.innerHTML = '';
+        favorites.forEach(favorite => {
+            const cardHTML = `
+                <div class="col-6 sect_card" data-id="${favorite.id}">
+                    <img src="${favorite.imgSrc}" alt="">
+                    <h5>${favorite.title}</h5>
+                    <p>${favorite.description}</p>
+                    <div class="sect__card-price">
+                        <div class="sect__card-price-txt">
+                            <h5>Цена</h5>
+                            <h5>${favorite.price}</h5>
+                        </div>
+                        <div class="sect__card-like">
+                            <img src="./Img/Sect1_img/Vector (1).svg" alt="" class="remove-from-favorite">
+                        </div>
+                    </div>
+                </div>
+            `;
+            favoritesContainer.innerHTML += cardHTML;
+        });
+    };
+
+    renderFavorites();
+
+    favoritesContainer.addEventListener('click', (event) => {
+        if (event.target.classList.contains('remove-from-favorite')) {
+            const card = event.target.closest('.sect_card');
+            const cardId = card.dataset.id;
+
+            // Удаление карточки из localStorage
+            favorites = favorites.filter(fav => fav.id !== cardId);
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+
+            // Перерендер списка избранного
+            renderFavorites();
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const favoritesContainer = document.querySelector('.sectfavor__item.row');
+
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    const renderFavorites = () => {
+        favoritesContainer.innerHTML = '';
+        favorites.forEach(favorite => {
+            const cardHTML = `
+                <div class="col-6 sect_card" data-id="${favorite.id}">
+                    <img src="${favorite.imgSrc}" alt="">
+                    <h5>${favorite.title}</h5>
+                    <p>${favorite.description}</p>
+                    <div class="sect__card-price">
+                        <div class="sect__card-price-txt">
+                            <h5>Цена</h5>
+                            <h5>${favorite.price}</h5>
+                        </div>
+                        <div class="sect__card-like">
+                            <img src="./Img/Sect1_img/Vector (1).svg" alt="" class="remove-from-favorite">
+                        </div>
+                    </div>
+                </div>
+            `;
+            favoritesContainer.innerHTML += cardHTML;
+        });
+    };
+
+    renderFavorites();
+
+    favoritesContainer.addEventListener('click', (event) => {
+        if (event.target.classList.contains('remove-from-favorite')) {
+            const card = event.target.closest('.sect_card');
+            const cardId = card.dataset.id;
+
+            // Удаление карточки из localStorage
+            favorites = favorites.filter(fav => fav.id !== cardId);
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+
+            // Перерендер списка избранного
+            renderFavorites();
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+   <div class="col-6 sect_card" id="1">
+                    <img src="./Img/Sect1_img/Rectangle 45.jpg" alt="">
+                    <h5>HTML Fundamental</h5>
+                    <p>Well organized and easy to make you understand tutorials with lots2.</p>
+                    <div class="sect__card-price">
+                        <div class="sect__card-price-txt">
+                            <h5>Цена</h5>
+                            <h5>10 000 000 сум</h5>
+                        </div>
+                        <div class="sect__card-like">
+                            <img src="./Img/Sect1_img/Vector (2).svg" alt="" class="add-to-favorite">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 sect_card" id="2">
+                    <img src="./Img/Sect1_img/Rectangle 45.jpg" alt="">
+                    <h5>HTML Fundamental2</h5>
+                    <p>Well organized and easy to make you understand tutorials with lots32.</p>
+                    <div class="sect__card-price">
+                        <div class="sect__card-price-txt">
+                            <h5>Цена</h5>
+                            <h5>10 000 000 сум</h5>
+                        </div>
+                        <div class="sect__card-like">
+                            <img src="./Img/Sect1_img/Vector (2).svg" alt="" class="add-to-favorite">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 sect_card" id="3">
+                    <img src="./Img/Sect1_img/Rectangle 45.jpg" alt="">
+                    <h5>HTML Fundamental3</h5>
+                    <p>Well organized and easy to make you understand tutorials with lots13.</p>
+                    <div class="sect__card-price">
+                        <div class="sect__card-price-txt">
+                            <h5>Цена</h5>
+                            <h5>10 000 000 сум</h5>
+                        </div>
+                        <div class="sect__card-like">
+                            <img src="./Img/Sect1_img/Vector (2).svg" alt="" class="add-to-favorite">
+                        </div>
+                    </div>
+                </div>

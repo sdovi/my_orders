@@ -1,0 +1,91 @@
+.sect1 {
+    position: relative;
+    height:100%;
+    width: 100%;
+    background-image: url('https://imgbly.com/ib/LA6VkepmIp.jpg');
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center;
+}
+.sect__block_1{
+    overflow: auto;
+
+    height: 100%;
+}
+.sect1__cards{
+    height: 100%;
+}
+.sect__block_1{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.sect1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* черный прозрачный цвет */
+}
+
+.sect1 .sect1__comblock img {
+    max-width: 450px;
+    max-height: 550px;
+    padding-top: 50px;
+}
+.sect__block_1{
+
+    z-index: 2;
+}
+
+.sect1 .sect1__comblock {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-fluid {
+    width: 70%;
+    margin: auto;
+}
+
+
+@media screen and (max-width: 790px) {
+    
+    .sect1 .sect1__comblock {
+        display: flex;
+        justify-content: center;
+    }
+.container-fluid {
+    width: 90%;
+    margin: auto;
+} 
+
+}
+
+
+.sect__block_1{
+    color: white;
+    text-align: center;
+    max-width: 700px;
+    
+}
+.sect__block_1 h1{
+    font-size: clamp(25px, 4vw, 40px);
+    font-weight: 600;
+
+}
+.sect1__comblock{
+    padding-top: 30px;
+}
+.sect__block_1 p{
+    font-size: clamp(10px, 3vw, 15px);
+
+}
+.sect__block_1 p {
+    margin-bottom: 0.4rem;
+}
+.sect__block_1{
+    padding-bottom: 30px;
+}

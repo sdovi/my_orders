@@ -1,0 +1,61 @@
+.sect4-bg {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.sect4-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.675) !important; /* Прозрачный черный цвет */
+
+}
+.sect2__h1{
+    padding-bottom: 50px;
+}
+
+.section2__txt{
+    text-align: center;
+    padding-top: 40px;
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+.section2__txt h1{
+    font-size: clamp(40px, 4vw, 100px);
+    font-weight: 600;
+
+}
+.header_p{
+    font-size: clamp(10px,4vw, 15px);
+}
+.container-fluid2{
+    width: 90%;
+    margin: auto;
+}
+.section2__txt p {
+    padding-bottom: 30px;
+    font-style: italic;
+    font-size: clamp(14px, 4vw, 20px);
+}
+@media screen and (max-width:1100px) {
+    .sect2-bg{
+        height: 100%;
+    }
+
+    
+}
+@media screen and (max-width:700px) {
+
+    .sect2__h1{
+        padding-bottom: 10px;
+    }
+
+    
+}

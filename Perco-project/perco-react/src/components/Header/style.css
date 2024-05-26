@@ -1,0 +1,241 @@
+.header__logo-text {
+    position: relative;
+    height: 120vh;
+    width: 100%;
+    overflow: hidden;
+    background-image: url('https://imgbly.com/ib/iDMNEnW6ju.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header__logo-text {
+  position: relative; /* Для наложения псевдоэлемента */
+}
+
+.header__logo-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.333); /* Черный фон с прозрачностью 50% */
+  z-index: 1;
+}
+
+.header__logo-text img {
+  position: relative; /* Для сохранения изображения на верхнем слое */
+  z-index: 2;
+}
+.header__link {
+  text-decoration: none; /* Убираем стандартное подчеркивание */
+}
+.container2{
+    width: 90%;
+    margin: auto;
+}
+.navbar-brand{
+  
+  color: white;
+  text-decoration: none; /* Убираем стандартное подчеркивание */
+  border-bottom: 3px solid white; /* Задаем толщину и стиль нижней черты */
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    z-index: 2;
+    position: relative;
+    font-size: 25px;
+}
+.navbar-brand:hover{
+    color: white;
+}
+.navbar{
+  align-items: center;
+}
+
+.container-fluid{
+  width:95% !important;
+  margin: auto;
+}
+.header__logo {
+    max-width: 200px;
+    width: 100%;
+    
+    display: end;
+    justify-content: end;
+    margin: auto;
+    position: relative;
+    z-index: 2; /* Увеличиваем z-index, чтобы логотип был поверх черного фона */
+}
+.header_p {
+    font-weight: 500;
+    text-align: center;
+    font-style: oblique;
+    font-size: clamp(45px, 5vw, 100px);
+    color: white;
+    position: relative; /* Добавляем позиционирование */
+    z-index: 3; 
+}
+.header_p2 {
+    font-weight: 700;
+    text-align: center;
+    font-size: clamp(45px, 5vw, 100px);
+    color: white;
+    position: relative; /* Добавляем позиционирование */
+    z-index: 3; 
+}
+
+
+.header__txt {
+    font-weight: 700;
+    text-align: center;
+    font-size: clamp(45px, 5vw, 110px);
+    color: white;
+    position: relative; /* Добавляем позиционирование */
+    z-index: 3; /* Увеличиваем z-index, чтобы текст был над черным фоном */
+}
+
+/* При наведении увеличиваем высоту черного фона */
+.header__logo-text:hover .header__black-overlay {
+    height: 100%;
+}
+.header__btn1{
+    position: relative;
+    z-index: 3;
+    color: white;
+    background-color: rgba(85, 85, 85, 0.755);
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+}
+.header__btn2 a{
+  color: black;
+  text-decoration: none;
+}
+
+
+.header__btn2{
+    position: relative;
+    z-index: 3;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    background-color:rgb(228, 139, 60);
+    max-width: 336px;
+    width: 100%;
+    padding: 10px 30px;
+    border: none;
+}
+
+.header_block-btn {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.header__logo-text{
+    margin-bottom: 1rem;
+}
+
+/* EmailForm.css */
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #303030;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    color: #ffffff;
+    position: relative; /* Добавляем позицию для корректного позиционирования комментария */
+  }
+  
+  .close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .header_form{
+    margin-top:40px;
+  }
+  
+  .input {
+    width: calc(100% - 20px); /* Добавляем вычитание отступа */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #454545; /* Задаем цвет фона для инпутов */
+    color: #ffffff; /* Задаем цвет текста для инпутов */
+  }
+  
+  .input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #6B6B6B; /* Добавляем эффект фокуса для инпутов */
+  }
+  
+  .optional-text {
+    color: #aaa;
+    margin-bottom: 10px;
+  }
+  
+  .submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #45a049;
+  }
+  
+@media screen and (max-width:600px) {
+  .navbar2{
+    display: block !important;
+  }
+  
+  .header__logo{
+    justify-content: center !important;
+    display: flex;
+    max-width: 300px !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: auto !important;
+  }
+  .header__logo2{
+    justify-content: center;
+    display: center;
+    max-width: 250px;
+    width: 100%;
+    margin: auto;
+  }
+  .header_block-btn{
+    width: 98%;
+    margin: auto;
+  }
+  .header__logo-text {
+    height: 100vh;
+}
+}
